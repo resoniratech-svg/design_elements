@@ -1,0 +1,106 @@
+{
+  "company": {
+    "name": "Design Elements Trading and Contracting W.L.L",
+    "name_ar": "ديسين المنتس للتجارة والمقاولات ذ.م.م",
+    "tagline": "Interior Design & Solutions",
+    "introduction": "Design Elements is a leading provider of comprehensive business solutions in the field of flooring, furniture, wallpaper, window blinds, curtains, and other related products. We are committed to delivering outstanding quality, affordability, and exceptional customer service, which sets us apart from our competitors.",
+    "about": "Our team of experts has extensive experience in the industry and is dedicated to delivering the highest level of service and expertise to our customers. Our professionals work closely with each customer to understand their requirements and provide customized solutions that are designed to meet their specific needs.",
+    "mission": "Our mission is to provide efficient, timely, and innovative solutions to our customers that cater to their unique needs and preferences.",
+    "vision": "Our vision is to be recognized as the trusted partner for organizations and individuals who seek to enhance their spaces and create a better aesthetic. We will achieve this by consistently delivering cutting-edge design solutions that exceed expectations.",
+    "address": "Office 1204, Aspect Tower, Business Bay, Dubai, UAE",
+    "phones": ["+971 4 123 4567", "+971 50 123 4567"],
+    "email": "ab@designelementsqatar.com"
+  },
+  "services": {
+    "flooring": {
+      "title": "Exquisite Flooring Solutions",
+      "description": "Installation and maintenance of various types of flooring in residential, commercial, and industrial spaces.",
+      "categories": [
+        {
+          "name": "Carpet Tiles",
+          "description": "Versatile and easy-to-install flooring solution. We provide high-density nylon and polypropylene tiles with various backing options like Bitumen, PVC, and Eco-friendly felt.",
+          "types": ["Nylon 6.6", "Solution Dyed", "Striped & Patterned", "Eco-Backing"],
+          "image": "/images/carpet-tiles/Carpet tiles_pages-to-jpg-0001.jpg"
+        },
+        {
+          "name": "Broadloom & Hospitality Carpets",
+          "description": "Seamless wall-to-wall luxury. Ideal for grand hotels, corridors, and executive offices where comfort and sound insulation are paramount.",
+          "types": ["Axminster", "Wilton", "Hand Tufted", "Machine Printed"],
+          "image": "/images/axminster-carpet/Axminster carpet_page-0001.jpg"
+        },
+        {
+          "name": "Specialized & Custom Carpets",
+          "description": "Bespoke flooring solutions tailored to specific cultural and functional needs, including grand mosque designs and custom luxury rugs.",
+          "types": ["Mosque/Prayer Carpets", "Handmade Wool Rugs", "Sisal & Seagrass", "Hospitality Grade"],
+          "image": "/images/carpet-rugs/carpet-rugs-1.jpg"
+        },
+        {
+          "name": "Resilient Vinyl Flooring",
+          "description": "Made from synthetic materials such as PVC. Known for durability, water resistance, and ease of maintenance.",
+          "types": ["Homogeneous", "Heterogeneous", "LVT"],
+          "image": "/images/SPC & LVT flooring.jpeg"
+        },
+        {
+          "name": "Raised Access Flooring",
+          "description": "Elevated above a building's subfloor, creating a void for electrical, HVAC, and other systems.",
+          "materials": ["Steel", "Aluminum", "Wood"],
+          "image": "/images/RAISED ACCESS FLOORING.jpeg"
+        },
+        {
+          "name": "Indoor & Outdoor Rubber & Sports Flooring",
+          "description": "Specialized flooring for gyms, sports courts, and playgrounds.",
+          "types": ["Indoor sports flooring", "Rubber tiles", "Rubber flooring"],
+          "image": "/images/GYM RUBBER AND PVC FLOORING.jpeg"
+        },
+        {
+          "name": "Artificial Grass",
+          "description": "Perfect for domestic gardens, football courts, and paddle courts.",
+          "image": "/images/ARTIFICIAL GRASS.jpeg"
+        },
+        {
+          "name": "Decking",
+          "description": "Premium outdoor decking solutions for terraces and balconies.",
+          "image": "/images/hardwood.png"
+        },
+        {
+          "name": "Parquet Flooring",
+          "description": "Classic and elegant wooden flooring patterns.",
+          "image": "/images/wooden flooring herringbone pattern.jpeg"
+        },
+        {
+          "name": "Porcelain & Vitrified Tiles",
+          "description": "High-density tiles for sophisticated wall and floor finishes.",
+          "image": "/images/porcelain_tiles.png"
+        }
+      ]
+    },
+    "furniture": {
+      "title": "Designer Furniture",
+      "description": "Design Elements offers a wide range of furniture solutions for homes and offices. Our collection is designed to provide style, comfort, and functionality.",
+      "image": "/images/LEATHER AND FABRIC UPHOLSTERY.jpeg"
+    },
+    "wallpaper": {
+      "title": "Decorative Wallpaper",
+      "description": "Exquisite patterns and textures to transform your walls into works of art.",
+      "image": "/images/wallpaper.png"
+    },
+    "window_treatments": {
+      "title": "Window Blinds & Curtains",
+      "blinds": {
+        "name": "Window Blinds",
+        "types": ["Roller Blinds", "Vertical Window Blinds"]
+      },
+      "curtains": {
+        "name": "Curtains",
+        "description": "Tailored curtain solutions for every interior style."
+      },
+      "image": "/images/DRAPERY CURTAINS.jpeg"
+    }
+  },
+  "clients": [
+    "Katara Towers Hotels (Raffles and Fairmont)", "Century hotel Doha and Marina", "Casa Milano", "Tadmur Contracting", "Hilton Hotel", "UCC", "Sheraton Doha", "Ritz Carlton", "Amlak"
+  ],
+  "manufacturers": [
+    "Tarkett", "Desso", "Weihai haima", "Seventrust", "Ztfloor", "Ege", "Somfy", "Bancroft", "Topflor", "Interfloor", "Belgotex", "Csi", "Primelay", "Mapei", "Tai ping", "Burmatex", "Lano", "Craftex india"
+  ]
+}
