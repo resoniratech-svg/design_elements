@@ -103,7 +103,7 @@ function HomePage() {
           <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem' }}>
             <div className="card">
               <div className="card-img-container">
-                <img src="/images/SPC & LVT flooring.jpeg" alt="Flooring" />
+                <img src="/images/SPC &  LVT flooring.jpeg" alt="Flooring" />
               </div>
               <div style={{ padding: '2.5rem' }}>
                 <h3 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>Flooring</h3>
