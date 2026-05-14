@@ -39,7 +39,7 @@ function HomePage() {
               {company.introduction}
             </p>
             <div style={{ marginTop: '3.5rem', display: 'flex', gap: '1.5rem' }}>
-              <Link to="/flooring" className="button-primary">View Collections</Link>
+              <a href="#services" className="button-primary">View Collections</a>
               <Link to="/gallery" style={{ display: 'inline-block', padding: '1rem 0', textDecoration: 'none', color: '#111', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.9rem' }}>View Portfolio &rarr;</Link>
             </div>
           </div>
@@ -94,7 +94,7 @@ function HomePage() {
       </section>
 
       {/* Services Overview (Page 5) */}
-      <section className="section-padding" style={{ background: '#fff' }}>
+      <section id="services" className="section-padding" style={{ background: '#fff' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
             <h2 style={{ fontSize: '0.8rem', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.3em', marginBottom: '1rem' }}>Our Expertise</h2>
