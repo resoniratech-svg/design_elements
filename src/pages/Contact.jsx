@@ -27,7 +27,9 @@ function Contact() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
               <div>
                 <h4 style={{ color: 'var(--accent-light)', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.1em' }}>Main Office</h4>
-                <p style={{ fontSize: '1.2rem', fontWeight: 700 }}>{company.address}</p>
+                <a href={company.maps_link} target="_blank" rel="noreferrer" style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--text)', textDecoration: 'none' }}>
+                  {company.address}
+                </a>
               </div>
               <div>
                 <h4 style={{ color: 'var(--accent-light)', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.1em' }}>Contact Numbers</h4>
@@ -37,7 +39,9 @@ function Contact() {
               </div>
               <div>
                 <h4 style={{ color: 'var(--accent-light)', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.1em' }}>Email</h4>
-                <p style={{ fontSize: '1.1rem' }}>{company.email}</p>
+                {company.emails.map((email, i) => (
+                  <p key={i} style={{ fontSize: '1.1rem' }}>{email}</p>
+                ))}
               </div>
               <div>
                 <h4 style={{ color: 'var(--accent-light)', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.1em' }}>Working Hours</h4>

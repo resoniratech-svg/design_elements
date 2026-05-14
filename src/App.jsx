@@ -268,9 +268,16 @@ function HomePage() {
             </div>
             <div>
               <h4 style={{ color: 'white', marginBottom: '2rem' }}>Get in Touch</h4>
-              <p style={{ color: '#9ca3af', marginBottom: '1rem' }}>{company.email}</p>
-              <p style={{ color: '#9ca3af' }}>{company.phones[0]}</p>
-              <p style={{ color: '#9ca3af' }}>{company.phones[1]}</p>
+              <div style={{ marginBottom: '1rem' }}>
+                {company.emails.map((email, i) => (
+                  <p key={i} style={{ color: '#9ca3af' }}>{email}</p>
+                ))}
+              </div>
+              <div>
+                {company.phones.map((phone, i) => (
+                  <p key={i} style={{ color: '#9ca3af' }}>{phone}</p>
+                ))}
+              </div>
             </div>
           </div>
           <div style={{ marginTop: '5rem', paddingTop: '2rem', borderTop: '1px solid #222', textAlign: 'center', color: '#4b5563', fontSize: '0.8rem' }}>
@@ -282,9 +289,12 @@ function HomePage() {
   );
 }
 
+import ScrollToTop from './ScrollToTop';
+
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/flooring" element={<Flooring />} />
