@@ -9,8 +9,14 @@ function Gallery() {
     { title: "Palm Jumeirah Luxury Villa", category: "Residential", img: "/images/DRAPERY CURTAINS.jpeg", scope: "Window Treatments & Wallpaper" },
     { title: "Downtown Dubai Retail Space", category: "Commercial", img: "/images/porcelain_tiles.png", scope: "Porcelain Tiles" },
     { title: "Modern Marina Apartment", category: "Residential", img: "/images/SPC &  LVT flooring.jpeg", scope: "LVT Flooring" },
-    { title: "Boutique Hotel Lobby", category: "Commercial", img: "/images/axminster-carpet/Axminster carpet_page-0010.jpg", scope: "Custom Murals" },
-    { title: "Suburban Family Home", category: "Residential", img: "/images/wooden flooring herringbone pattern.jpeg", scope: "Engineered Hardwood" }
+    { title: "Boutique Hotel Lobby", category: "Commercial", img: "/images/luxury_carpet_hero.png", scope: "Custom Axminster Carpets" },
+    { title: "Suburban Family Home", category: "Residential", img: "/images/wooden flooring herringbone pattern.jpeg", scope: "Engineered Hardwood" },
+    { title: "Corporate Headquarters", category: "Commercial", img: "/images/carpet_tiles_category.png", scope: "Geometric Carpet Tiles" },
+    { title: "Grand Ballroom Renovation", category: "Commercial", img: "/images/axminster-carpet/Axminster carpet_page-0015.jpg", scope: "Bespoke Broadloom" },
+    { title: "Luxury Penthouse Suite", category: "Residential", img: "/images/custom_rugs_category.png", scope: "Hand-Tufted Rugs" },
+    { title: "High-End Executive Office", category: "Commercial", img: "/images/wallpaper_office.png", scope: "Textured Wall Coverings" },
+    { title: "Modern Villa Living Area", category: "Residential", img: "/images/wallpaper_living_room.png", scope: "Fabric Wallpapers" },
+    { title: "Five-Star Hotel Corridors", category: "Commercial", img: "/images/print-carpet/print-carpet-15.jpg", scope: "Machine Printed Carpets" }
   ];
 
   const filteredProjects = filter === 'All' ? projects : projects.filter(p => p.category === filter);
