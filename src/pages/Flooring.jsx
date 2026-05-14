@@ -140,7 +140,7 @@ function Flooring() {
                   <img src={img} alt={`Pattern ${i}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" />
                 </div>
                 <div style={{ padding: '1.5rem', textAlign: 'center' }}>
-                  <h4 style={{ fontSize: '0.85rem', fontWeight: 700, color: '#444' }}>{categoryLabels[activeCategory]} - {i + 1}</h4>
+                  <h4 style={{ fontSize: '0.85rem', fontWeight: 700, color: '#444' }}>{categoryLabels[activeCategory]}</h4>
                   <div style={{ fontSize: '0.7rem', color: 'var(--accent)', marginTop: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>View Details</div>
                 </div>
               </div>
