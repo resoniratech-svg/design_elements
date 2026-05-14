@@ -44,7 +44,7 @@ function HomePage() {
             </div>
           </div>
           <div className="hero-image">
-            <img src="/images/axminster-carpet/Axminster carpet_page-0010.jpg" alt="Interior Design" className="brochure-image-rounded" style={{ width: '100%', height: '650px', objectFit: 'cover' }} />
+            <img src="/images/furniture.png" alt="Premium Interior Design" className="brochure-image-rounded" style={{ width: '100%', height: '650px', objectFit: 'cover' }} />
           </div>
         </div>
       </header>
