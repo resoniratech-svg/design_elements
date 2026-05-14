@@ -9,7 +9,7 @@ function Gallery() {
     { title: "Palm Jumeirah Luxury Villa", category: "Residential", img: "/images/DRAPERY CURTAINS.jpeg", scope: "Window Treatments & Wallpaper" },
     { title: "Downtown Dubai Retail Space", category: "Commercial", img: "/images/porcelain_tiles.png", scope: "Porcelain Tiles" },
     { title: "Modern Marina Apartment", category: "Residential", img: "/images/SPC &  LVT flooring.jpeg", scope: "LVT Flooring" },
-    { title: "Boutique Hotel Lobby", category: "Commercial", img: "/images/axminster-carpet/Axminster carpet_page-0001.jpg", scope: "Custom Murals" },
+    { title: "Boutique Hotel Lobby", category: "Commercial", img: "/images/axminster-carpet/Axminster carpet_page-0010.jpg", scope: "Custom Murals" },
     { title: "Suburban Family Home", category: "Residential", img: "/images/wooden flooring herringbone pattern.jpeg", scope: "Engineered Hardwood" }
   ];
 
