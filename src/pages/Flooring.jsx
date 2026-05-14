@@ -174,53 +174,39 @@ function Flooring() {
           padding: '2rem'
         }} onClick={() => setSelectedImage(null)}>
           <div style={{
-            background: '#fff',
-            maxWidth: '1100px',
-            width: '100%',
-            borderRadius: '24px',
-            overflow: 'hidden',
-            display: 'grid',
-            gridTemplateColumns: '1fr 0.6fr',
-            position: 'relative'
+            position: 'relative',
+            maxWidth: '90vw',
+            maxHeight: '90vh',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
           }} onClick={e => e.stopPropagation()}>
-            <div style={{ height: '70vh', background: '#f0f0f0' }}>
-              <img src={selectedImage.url} alt="Large View" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-            </div>
-            <div style={{ padding: '3rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-              <div style={{ color: 'var(--accent)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.2em', fontSize: '0.8rem', marginBottom: '1rem' }}>Product Details</div>
-              <h2 style={{ fontSize: '2.2rem', marginBottom: '2rem' }}>{categoryLabels[activeCategory]} #{selectedImage.index + 1}</h2>
-              
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                <div>
-                  <h4 style={{ fontSize: '0.7rem', textTransform: 'uppercase', color: '#888', marginBottom: '0.5rem' }}>Material Composition</h4>
-                  <p style={{ fontWeight: 600 }}>{currentSpecs.material}</p>
-                </div>
-                <div>
-                  <h4 style={{ fontSize: '0.7rem', textTransform: 'uppercase', color: '#888', marginBottom: '0.5rem' }}>Pile Height</h4>
-                  <p style={{ fontWeight: 600 }}>{currentSpecs.pile}</p>
-                </div>
-                <div>
-                  <h4 style={{ fontSize: '0.7rem', textTransform: 'uppercase', color: '#888', marginBottom: '0.5rem' }}>Primary Usage</h4>
-                  <p style={{ fontWeight: 600 }}>{currentSpecs.usage}</p>
-                </div>
-              </div>
-
-              <div style={{ marginTop: '3rem' }}>
-                <Link to="/contact" className="button-primary" style={{ display: 'block', textAlign: 'center' }}>Inquire for Quote</Link>
-              </div>
-            </div>
+            <img 
+              src={selectedImage.url} 
+              alt="Large View" 
+              style={{ 
+                maxWidth: '100%', 
+                maxHeight: '90vh', 
+                objectFit: 'contain',
+                borderRadius: '8px',
+                boxShadow: '0 20px 50px rgba(0,0,0,0.5)'
+              }} 
+            />
+            
             <button 
               onClick={() => setSelectedImage(null)}
               style={{
                 position: 'absolute',
-                top: '20px', right: '20px',
-                background: 'rgba(0,0,0,0.5)',
+                top: '-20px', 
+                right: '-20px',
+                background: 'var(--accent)',
                 color: 'white',
                 border: 'none',
                 width: '40px', height: '40px',
                 borderRadius: '50%',
                 cursor: 'pointer',
-                fontSize: '1.2rem'
+                fontSize: '1.2rem',
+                boxShadow: '0 4px 10px rgba(0,0,0,0.3)'
               }}
             >✕</button>
           </div>
