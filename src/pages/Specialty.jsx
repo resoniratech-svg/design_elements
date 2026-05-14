@@ -24,19 +24,19 @@ function Specialty() {
     {
       title: "Outdoor Decking (WPC)",
       desc: "Weather-resistant Wood Plastic Composite decking. Perfect for swimming pool surrounds, terraces, and high-traffic outdoor areas.",
-      img: "https://images.unsplash.com/photo-1590059300641-f0907409292c?q=80&w=800&auto=format&fit=crop",
+      img: "/images/hardwood.png",
       tags: ["Weather Resistant", "Anti-Slip", "Eco-Friendly"]
     },
     {
       title: "Rubber Tiles & Playgrounds",
       desc: "Safety-first rubber tiling for children's playgrounds and outdoor fitness areas. High durability and excellent fall protection.",
-      img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop",
+      img: "/images/GYM RUBBER AND PVC FLOORING.jpeg",
       tags: ["Safety Certified", "Impact Protection", "Outdoor Grade"]
     },
     {
       title: "Acoustic Solutions",
       desc: "Specialized wall and ceiling panels designed to control sound reflections and noise levels in theaters, conference rooms, and open offices.",
-      img: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=800&auto=format&fit=crop",
+      img: "/images/INDOOR SPORTS FLOORING.jpeg",
       tags: ["Sound Control", "Modern Design", "Fire Rated"]
     }
   ];

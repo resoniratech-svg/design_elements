@@ -74,7 +74,7 @@ function WindowTreatments() {
             </div>
           </div>
           <div>
-            <img src="/images/furniture.png" alt="Modern Blinds" className="brochure-image-rounded" style={{ width: '100%', height: '450px', objectFit: 'cover', borderRadius: '40px 0 40px 0' }} />
+            <img src="/images/WINDOW BLINDS.jpeg" alt="Modern Blinds" className="brochure-image-rounded" style={{ width: '100%', height: '450px', objectFit: 'cover', borderRadius: '40px 0 40px 0' }} />
           </div>
         </div>
       </section>

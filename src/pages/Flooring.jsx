@@ -54,19 +54,19 @@ function Flooring() {
       <section className="section-padding" style={{ background: '#111', color: 'white', borderBottom: '1px solid #222' }}>
         <div className="container grid" style={{ gridTemplateColumns: '1.2fr 0.8fr', gap: '5rem', alignItems: 'center' }}>
           <div>
-            <h2 style={{ fontSize: '0.8rem', color: 'var(--accent-light)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: '1.5rem' }}>Global Carpet Specialist</h2>
-            <h3 style={{ fontSize: '3.5rem', marginBottom: '2rem', color: 'white' }}>The Art of Premium Carpeting</h3>
+            <h2 style={{ fontSize: '0.8rem', color: 'var(--accent-light)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: '1.5rem' }}>Heritage & Excellence</h2>
+            <h3 style={{ fontSize: '3.5rem', marginBottom: '2rem', color: 'white' }}>World-Class Carpet Solutions</h3>
             <p style={{ color: '#aaa', fontSize: '1.15rem', lineHeight: '1.8', marginBottom: '3rem' }}>
-              As a leader in the carpeting industry, we provide end-to-end solutions from design to installation. Our carpets are sourced from the world's finest mills in Belgium, USA, and the UAE, ensuring durability, comfort, and aesthetic perfection for every space.
+              Established in 1958, our manufacturing partners operate the world's largest Axminster carpet mill. With a heritage of over 60 years in classical design and hospitality excellence, we deliver certified quality through ISO9001 and ISO14001 standards, ensuring your project meets the highest global specifications.
             </p>
             <div className="grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                <div style={{ padding: '2rem', background: '#222', borderRadius: '12px' }}>
-                  <h4 style={{ color: 'var(--accent-light)', marginBottom: '0.5rem' }}>High Durability</h4>
-                  <p style={{ fontSize: '0.85rem', color: '#888' }}>Engineered for heavy foot traffic in hotels and offices.</p>
+                  <h4 style={{ color: 'var(--accent-light)', marginBottom: '0.5rem' }}>Global Reach</h4>
+                  <p style={{ fontSize: '0.85rem', color: '#888' }}>Installed in over 1,000 five-star hotels across five continents.</p>
                </div>
                <div style={{ padding: '2rem', background: '#222', borderRadius: '12px' }}>
-                  <h4 style={{ color: 'var(--accent-light)', marginBottom: '0.5rem' }}>Sound Insulation</h4>
-                  <p style={{ fontSize: '0.85rem', color: '#888' }}>Advanced acoustic properties for quieter interiors.</p>
+                  <h4 style={{ color: 'var(--accent-light)', marginBottom: '0.5rem' }}>Certified Quality</h4>
+                  <p style={{ fontSize: '0.85rem', color: '#888' }}>CRI Green Label Plus and OHSAS 18001 Health system certified.</p>
                </div>
             </div>
           </div>
