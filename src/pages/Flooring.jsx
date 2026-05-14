@@ -83,7 +83,7 @@ function Flooring() {
           </div>
           <div>
             <img 
-              src="/images/axminster-carpet/Axminster carpet_page-0010.jpg" 
+              src="/images/luxury_carpet_hero.png" 
               alt="Luxury Carpet" 
               className="brochure-image-rounded" 
               style={{ width: '100%', height: '550px', objectFit: 'cover' }} 
