@@ -12,6 +12,17 @@ function Flooring() {
   const allPatterns = patterns[activeCategory] || [];
   const displayPatterns = allPatterns.slice(0, visibleCount);
 
+  // Fix for the "gap" issue when clicking images (prevent body scroll shift)
+  React.useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = '15px'; // Approximate scrollbar width
+    } else {
+      document.body.style.overflow = 'unset';
+      document.body.style.paddingRight = '0';
+    }
+  }, [selectedImage]);
+
   const categoryLabels = {
     'axminster-carpet': 'Axminster Carpets',
     'print-carpet': 'Printed Carpets',
