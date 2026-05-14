@@ -5,7 +5,7 @@ function Gallery() {
   const [filter, setFilter] = useState('All');
 
   const projects = [
-    { title: "Business Bay Executive Offices", category: "Commercial", img: "/images/LEATHER AND FABRIC UPHOLSTERY.jpeg", scope: "Flooring & Furniture" },
+    { title: "Business Bay Executive Offices", category: "Commercial", img: "/images/furniture.png", scope: "Flooring & Furniture" },
     { title: "Palm Jumeirah Luxury Villa", category: "Residential", img: "/images/DRAPERY CURTAINS.jpeg", scope: "Window Treatments & Wallpaper" },
     { title: "Downtown Dubai Retail Space", category: "Commercial", img: "/images/porcelain_tiles.png", scope: "Porcelain Tiles" },
     { title: "Modern Marina Apartment", category: "Residential", img: "/images/SPC &  LVT flooring.jpeg", scope: "LVT Flooring" },
