@@ -45,9 +45,7 @@ function Specialty() {
     <div style={{ minHeight: '100vh', background: '#fff' }}>
       <nav className="glass-nav">
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px' }}>
-          <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-            <img src="/images/logo.jpeg" alt="Design Elements" style={{ height: '50px', objectFit: 'contain' }} />
-          </Link>
+          <Link to="/" style={{ textDecoration: 'none', color: '#111', fontWeight: 800, fontSize: '0.9rem', letterSpacing: '0.05em' }}>&larr; BACK TO HOME</Link>
           <div style={{ color: 'var(--accent)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.2em' }}>SPECIALTY PRODUCTS</div>
         </div>
       </nav>
