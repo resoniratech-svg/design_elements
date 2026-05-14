@@ -58,18 +58,25 @@ function Wallpaper() {
 
       <section className="section-padding" style={{ background: '#111', color: 'white' }}>
         <div className="container">
-           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
              <h2 style={{ color: 'white', fontSize: '2.5rem' }}>Exquisite Patterns & Textures</h2>
              <p style={{ color: 'var(--text-light)', marginTop: '1rem' }}>Transform your walls with our premium collections.</p>
            </div>
-           <div className="grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
-             <div style={{ padding: '2rem', background: '#222', borderRadius: '12px' }}>
-                <h3 style={{ color: 'var(--accent-light)', marginBottom: '1rem' }}>Residential</h3>
-                <p style={{ color: '#aaa' }}>Create a cozy, elegant atmosphere in your living room, bedroom, or dining area with our soft textures and warm patterns.</p>
+           <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+             <div className="card" style={{ background: 'transparent', border: 'none' }}>
+                <img src="/images/wallpaper_living_room.png" alt="Residential Wallpaper" style={{ width: '100%', height: '350px', objectFit: 'cover', borderRadius: '12px', marginBottom: '1.5rem' }} />
+                <h3 style={{ color: 'var(--accent-light)', marginBottom: '1rem', fontSize: '1.4rem' }}>Residential</h3>
+                <p style={{ color: '#aaa', fontSize: '0.9rem', lineHeight: '1.6' }}>Create a cozy, elegant atmosphere in your living room or bedroom with our soft textures and warm geometric patterns.</p>
              </div>
-             <div style={{ padding: '2rem', background: '#222', borderRadius: '12px' }}>
-                <h3 style={{ color: 'var(--accent-light)', marginBottom: '1rem' }}>Commercial</h3>
-                <p style={{ color: '#aaa' }}>Durable, washable, and highly resilient wall coverings perfect for high-traffic areas, hotels, and executive offices.</p>
+             <div className="card" style={{ background: 'transparent', border: 'none' }}>
+                <img src="/images/wallpaper_office.png" alt="Commercial Wallpaper" style={{ width: '100%', height: '350px', objectFit: 'cover', borderRadius: '12px', marginBottom: '1.5rem' }} />
+                <h3 style={{ color: 'var(--accent-light)', marginBottom: '1rem', fontSize: '1.4rem' }}>Commercial</h3>
+                <p style={{ color: '#aaa', fontSize: '0.9rem', lineHeight: '1.6' }}>Durable, highly resilient wall coverings perfect for high-traffic executive offices featuring subtle, sophisticated designs.</p>
+             </div>
+             <div className="card" style={{ background: 'transparent', border: 'none' }}>
+                <img src="/images/wallpaper_mural.png" alt="Custom Murals" style={{ width: '100%', height: '350px', objectFit: 'cover', borderRadius: '12px', marginBottom: '1.5rem' }} />
+                <h3 style={{ color: 'var(--accent-light)', marginBottom: '1rem', fontSize: '1.4rem' }}>Custom Murals</h3>
+                <p style={{ color: '#aaa', fontSize: '0.9rem', lineHeight: '1.6' }}>Stunning custom printed abstract murals with metallic accents, designed specifically for grand hotel lobbies and statement walls.</p>
              </div>
            </div>
         </div>
