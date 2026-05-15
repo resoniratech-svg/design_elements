@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom';
 
 function Gallery() {
   const [filter, setFilter] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const projects = [
-    { title: "Business Bay Executive Offices", category: "Commercial", img: "/images/furniture.png", scope: "Flooring & Furniture" },
-    { title: "Palm Jumeirah Luxury Villa", category: "Residential", img: "/images/DRAPERY CURTAINS.jpeg", scope: "Window Treatments & Wallpaper" },
+    { title: "Business Bay Executive Offices", category: "Commercial", img: "/images/leather_fabric.jpeg", scope: "Flooring & Furniture" },
+    { title: "Palm Jumeirah Luxury Villa", category: "Residential", img: "/images/drapery_curtains.jpeg", scope: "Window Treatments & Wallpaper" },
     { title: "Downtown Dubai Retail Space", category: "Commercial", img: "/images/porcelain_tiles.png", scope: "Porcelain Tiles" },
-    { title: "Modern Marina Apartment", category: "Residential", img: "/images/SPC &  LVT flooring.jpeg", scope: "LVT Flooring" },
+    { title: "Modern Marina Apartment", category: "Residential", img: "/images/spc_lvt_flooring.jpeg", scope: "LVT Flooring" },
     { title: "Boutique Hotel Lobby", category: "Commercial", img: "/images/luxury_carpet_hero.png", scope: "Custom Axminster Carpets" },
-    { title: "Suburban Family Home", category: "Residential", img: "/images/wooden flooring herringbone pattern.jpeg", scope: "Engineered Hardwood" },
+    { title: "Suburban Family Home", category: "Residential", img: "/images/wooden_herringbone.jpeg", scope: "Engineered Hardwood" },
     { title: "Corporate Headquarters", category: "Commercial", img: "/images/carpet_tiles_category.png", scope: "Geometric Carpet Tiles" },
     { title: "Grand Ballroom Renovation", category: "Commercial", img: "/images/axminster-carpet/Axminster carpet_page-0015.jpg", scope: "Bespoke Broadloom" },
     { title: "Luxury Penthouse Suite", category: "Residential", img: "/images/custom_rugs_category.png", scope: "Hand-Tufted Rugs" },
@@ -19,7 +20,12 @@ function Gallery() {
     { title: "Five-Star Hotel Corridors", category: "Commercial", img: "/images/print-carpet/print-carpet-15.jpg", scope: "Machine Printed Carpets" }
   ];
 
-  const filteredProjects = filter === 'All' ? projects : projects.filter(p => p.category === filter);
+  const filteredProjects = projects.filter(p => {
+    const matchesFilter = filter === 'All' || p.category === filter;
+    const matchesSearch = p.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                          p.scope.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesFilter && matchesSearch;
+  });
 
   return (
     <div style={{ minHeight: '100vh', background: '#fff' }}>
@@ -42,9 +48,19 @@ function Gallery() {
       <section className="section-padding">
         <div className="container">
           
-          {/* Filters */}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '4rem' }}>
-            {['All', 'Residential', 'Commercial'].map(cat => (
+          {/* Filters & Search */}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem', marginBottom: '4rem' }}>
+            <div style={{ width: '100%', maxWidth: '500px' }}>
+              <input 
+                type="text" 
+                placeholder="Search projects by name or scope..." 
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                style={{ width: '100%', padding: '1rem 1.5rem', borderRadius: '30px', border: '1px solid var(--border)', fontSize: '1rem', outline: 'none', background: '#f9fafb' }}
+              />
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+              {['All', 'Residential', 'Commercial'].map(cat => (
               <button 
                 key={cat}
                 onClick={() => setFilter(cat)}
@@ -63,6 +79,7 @@ function Gallery() {
                 {cat}
               </button>
             ))}
+            </div>
           </div>
 
           {/* Grid */}

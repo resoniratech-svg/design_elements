@@ -6,37 +6,37 @@ function Specialty() {
     {
       title: "Artificial Grass",
       desc: "Premium synthetic turf with 35mm to 45mm pile height. UV stabilized, pet-friendly, and perfect for residential gardens, balconies, and sports fields.",
-      img: "/images/artificial_grass.png",
+      img: "/images/artificial_grass.jpeg",
       tags: ["UV Stabilized", "Pet Friendly", "Low Maintenance"]
     },
     {
       title: "Sports Flooring",
       desc: "High shock absorption rubber and vinyl flooring for gyms, indoor sports courts, and athletic facilities. Designed for heavy impact and maximum safety.",
-      img: "/images/sports_rubber.png",
+      img: "/images/indoor_sports.jpeg",
       tags: ["High Impact", "Shock Absorbent", "Gym Grade"]
     },
     {
       title: "Raised Access Flooring",
       desc: "Ideal for modern office spaces, server rooms, and data centers. Provides easy access to underfloor utilities while maintaining a clean, professional finish.",
-      img: "/images/raised_access.png",
+      img: "/images/raised_access.jpeg",
       tags: ["Data Centers", "Office Utility", "Steel & Aluminum"]
     },
     {
       title: "Outdoor Decking (WPC)",
       desc: "Weather-resistant Wood Plastic Composite decking. Perfect for swimming pool surrounds, terraces, and high-traffic outdoor areas.",
-      img: "/images/hardwood.png",
+      img: "/images/wooden_herringbone.jpeg",
       tags: ["Weather Resistant", "Anti-Slip", "Eco-Friendly"]
     },
     {
       title: "Rubber Tiles & Playgrounds",
       desc: "Safety-first rubber tiling for children's playgrounds and outdoor fitness areas. High durability and excellent fall protection.",
-      img: "/images/GYM RUBBER AND PVC FLOORING.jpeg",
+      img: "/images/gym_rubber_pvc.jpeg",
       tags: ["Safety Certified", "Impact Protection", "Outdoor Grade"]
     },
     {
       title: "Acoustic Solutions",
       desc: "Specialized wall and ceiling panels designed to control sound reflections and noise levels in theaters, conference rooms, and open offices.",
-      img: "/images/INDOOR SPORTS FLOORING.jpeg",
+      img: "/images/indoor_sports.jpeg",
       tags: ["Sound Control", "Modern Design", "Fire Rated"]
     }
   ];
