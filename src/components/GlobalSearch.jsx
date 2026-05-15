@@ -17,7 +17,7 @@ function GlobalSearch() {
     <form onSubmit={handleSearch} style={{ display: 'flex', alignItems: 'center' }}>
       <input 
         type="text" 
-        placeholder="Search projects..." 
+        placeholder="Search..." 
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         style={{

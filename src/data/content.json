@@ -39,7 +39,7 @@
           "name": "Resilient Vinyl Flooring",
           "description": "Made from synthetic materials such as PVC. Known for durability, water resistance, and ease of maintenance.",
           "types": ["Homogeneous", "Heterogeneous", "LVT", "SPC"],
-          "image": "/images/luxury_lvt_flooring.png"
+          "image": "/images/vinyl_flooring.jpeg"
         },
         {
           "name": "SPC & LVT Flooring",
@@ -50,28 +50,28 @@
           "name": "Raised Access Flooring",
           "description": "Elevated above a building's subfloor, creating a void for electrical, HVAC, and other systems.",
           "materials": ["Steel", "Aluminum", "Wood"],
-          "image": "/images/raised_access.jpeg"
+          "image": "/images/raised_access.png"
         },
         {
           "name": "Indoor & Outdoor Rubber & Sports Flooring",
           "description": "Specialized flooring for gyms, sports courts, and playgrounds.",
           "types": ["Indoor sports flooring", "Rubber tiles", "Rubber flooring"],
-          "image": "/images/gym_rubber_pvc.jpeg"
+          "image": "/images/sports_rubber.png"
         },
         {
           "name": "Artificial Grass",
           "description": "Perfect for domestic gardens, football courts, and paddle courts.",
-          "image": "/images/artificial_grass.jpeg"
+          "image": "/images/artificial_grass.png"
         },
         {
           "name": "Decking",
           "description": "Premium outdoor decking solutions for terraces and balconies.",
-          "image": "/images/outdoor_decking_wpc.png"
+          "image": "/images/hardwood.png"
         },
         {
-          "name": "Parquet Flooring",
-          "description": "Classic and elegant wooden flooring patterns.",
-          "image": "/images/vibrant_engineered_hardwood.png"
+          "name": "Wooden Flooring (Herringbone Pattern)",
+          "description": "Classic and elegant wooden flooring in timeless herringbone and chevron patterns.",
+          "image": "/images/wooden_herringbone.jpeg"
         },
         {
           "name": "Porcelain & Vitrified Tiles",
@@ -83,7 +83,7 @@
     "furniture": {
       "title": "Designer Furniture",
       "description": "Design Elements offers a wide range of furniture solutions for homes and offices. Our collection is designed to provide style, comfort, and functionality.",
-      "image": "/images/leather_fabric.jpeg"
+      "image": "/images/furniture.png"
     },
     "wallpaper": {
       "title": "Decorative Wallpaper",

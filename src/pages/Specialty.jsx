@@ -7,7 +7,7 @@ function Specialty() {
     {
       title: "Artificial Grass",
       desc: "Premium synthetic turf with 35mm to 45mm pile height. UV stabilized, pet-friendly, and perfect for residential gardens, balconies, and sports fields.",
-      img: "/images/artificial_grass.jpeg",
+      img: "/images/artificial_grass.png",
       tags: ["UV Stabilized", "Pet Friendly", "Low Maintenance"]
     },
     {
@@ -31,13 +31,13 @@ function Specialty() {
     {
       title: "Rubber Tiles & Playgrounds",
       desc: "Safety-first rubber tiling for children's playgrounds and outdoor fitness areas. High durability and excellent fall protection.",
-      img: "/images/gym_rubber_pvc.jpeg",
+      img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop",
       tags: ["Safety Certified", "Impact Protection", "Outdoor Grade"]
     },
     {
       title: "Acoustic Solutions",
       desc: "Specialized wall and ceiling panels designed to control sound reflections and noise levels in theaters, conference rooms, and open offices.",
-      img: "/images/indoor_sports.jpeg",
+      img: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800&auto=format&fit=crop",
       tags: ["Sound Control", "Modern Design", "Fire Rated"]
     }
   ];

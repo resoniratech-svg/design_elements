@@ -46,7 +46,7 @@ function HomePage() {
             </div>
           </div>
           <div className="hero-image">
-            <img src="/images/leather_fabric.jpeg" alt="Premium Interior Design" className="brochure-image-rounded" style={{ width: '100%', height: '650px', objectFit: 'cover' }} />
+            <img src="/images/furniture.png" alt="Premium Interior Design" className="brochure-image-rounded" style={{ width: '100%', height: '650px', objectFit: 'cover' }} />
           </div>
         </div>
       </header>
@@ -55,7 +55,7 @@ function HomePage() {
       <section className="section-padding" style={{ background: 'var(--bg-light)' }}>
         <div className="container grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '6rem', alignItems: 'center' }}>
           <div>
-            <img src="/images/leather_fabric.jpeg" alt="About Us" className="brochure-image-rounded" style={{ width: '100%', height: '500px', objectFit: 'cover', borderRadius: '160px 0 160px 0' }} />
+            <img src="/images/luxury_carpet_hero.png" alt="About Us" className="brochure-image-rounded" style={{ width: '100%', height: '500px', objectFit: 'cover', borderRadius: '160px 0 160px 0' }} />
           </div>
           <div>
             <h2 style={{ fontSize: '0.8rem', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.3em', marginBottom: '1.5rem' }}>About Us</h2>
@@ -115,7 +115,7 @@ function HomePage() {
             </div>
             <div className="card">
               <div className="card-img-container">
-                <img src="/images/leather_fabric.jpeg" alt="Furniture" />
+                <img src="/images/furniture.png" alt="Furniture" />
               </div>
               <div style={{ padding: '2.5rem' }}>
                 <h3 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>Furniture</h3>
@@ -291,7 +291,7 @@ function HomePage() {
   );
 }
 
-import ScrollToTop from './ScrollToTop';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (

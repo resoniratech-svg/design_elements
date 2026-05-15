@@ -75,7 +75,7 @@ function WindowTreatments() {
             </div>
           </div>
           <div>
-            <img src="/images/luxury_window_blinds_curtains.png" alt="Modern Blinds" className="brochure-image-rounded" style={{ width: '100%', height: '450px', objectFit: 'cover', borderRadius: '40px 0 40px 0' }} />
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop" alt="Modern Blinds" className="brochure-image-rounded" style={{ width: '100%', height: '450px', objectFit: 'cover', borderRadius: '40px 0 40px 0' }} />
           </div>
         </div>
       </section>
@@ -94,9 +94,9 @@ function WindowTreatments() {
           <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2.5rem' }}>
             {[
               { 
-                title: "Eyelet Curtains", 
-                desc: "Modern, deep uniform folds that slide easily on a decorative pole. Perfect for a clean, contemporary look.",
-                img: "https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=800&auto=format&fit=crop"
+                title: "Drapery Curtains", 
+                desc: "Elegant floor-to-ceiling custom drapery with premium fabric selection for a grand and luxurious atmosphere.",
+                img: "https://images.unsplash.com/photo-1585312949313-75b9f71c4942?q=80&w=800&auto=format&fit=crop"
               },
               { 
                 title: "Blackout Curtains", 
@@ -106,7 +106,7 @@ function WindowTreatments() {
               { 
                 title: "Sheer & Voile", 
                 desc: "Lightweight fabrics that provide daytime privacy while allowing soft, diffused sunlight to fill the room.",
-                img: "https://images.unsplash.com/photo-1523413551367-ca8af837a9b5?q=80&w=800&auto=format&fit=crop"
+                img: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=800&auto=format&fit=crop"
               },
               { 
                 title: "Motorized Systems", 
@@ -142,7 +142,7 @@ function WindowTreatments() {
           </div>
 
           <div style={{ marginTop: '5rem', borderRadius: '40px', overflow: 'hidden', height: '400px' }}>
-            <img src="/images/luxury_window_blinds_curtains.png" alt="Luxury Curtain Display" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop" alt="Luxury Curtain Display" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
         </div>
       </section>

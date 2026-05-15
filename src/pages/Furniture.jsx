@@ -66,6 +66,10 @@ function Furniture() {
               <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--primary)' }}>Dining Elegance</h3>
               <p style={{ color: 'var(--text-light)', fontSize: '1rem', lineHeight: '1.6' }}>Timeless dining tables and chairs crafted from robust materials for exquisite gatherings and everyday durability.</p>
             </div>
+            <div className="card" style={{ border: 'none', background: 'var(--bg-light)', padding: '2rem', borderRadius: '16px' }}>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--primary)' }}>Custom Upholstery</h3>
+              <p style={{ color: 'var(--text-light)', fontSize: '1rem', lineHeight: '1.6' }}>Professional leather and fabric upholstery services to transform and personalize your furniture pieces.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -91,7 +95,7 @@ function Furniture() {
             </div>
           </div>
           <div>
-            <img src="/images/leather_fabric.jpeg" alt="Home Collection" className="brochure-image-rounded" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '160px 0 160px 0' }} />
+            <img src="/images/wallpaper_living_room.png" alt="Home Collection" className="brochure-image-rounded" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '160px 0 160px 0' }} />
           </div>
         </div>
       </section>
@@ -118,6 +122,36 @@ function Furniture() {
                 <p style={{ fontSize: '0.9rem', color: '#666' }}>Large-scale meeting tables and integrated power solutions.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Restoration Section */}
+      <section className="section-padding" style={{ background: '#fff' }}>
+        <div className="container grid" style={{ gridTemplateColumns: '1.2fr 0.8fr', alignItems: 'center', gap: '4rem' }}>
+          <div>
+            <h2 style={{ fontSize: '0.8rem', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.3em', marginBottom: '1.5rem' }}>Craftsmanship</h2>
+            <h3 style={{ fontSize: '3rem', marginBottom: '2rem' }}>Leather Restoration</h3>
+            <p style={{ color: 'var(--text-light)', fontSize: '1.1rem', marginBottom: '2rem', lineHeight: '1.8' }}>
+              Preserve your investment with our professional leather restoration and upholstery services. We specialize in bringing life back to worn leather furniture, restoring its original texture, color, and suppleness through expert craftsmanship.
+            </p>
+            <div className="grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+              <div>
+                <h4 style={{ fontSize: '1.1rem', color: 'var(--primary)', marginBottom: '0.5rem' }}>Leather Upholstery</h4>
+                <p style={{ fontSize: '0.9rem', color: '#666' }}>Premium fabric and leather replacements for high-end furniture.</p>
+              </div>
+              <div>
+                <h4 style={{ fontSize: '1.1rem', color: 'var(--primary)', marginBottom: '0.5rem' }}>Repair & Polish</h4>
+                <p style={{ fontSize: '0.9rem', color: '#666' }}>Deep cleaning, scratch repair, and color matching for all leather goods.</p>
+              </div>
+            </div>
+          </div>
+          <div style={{ overflow: 'hidden', borderRadius: '16px', boxShadow: 'var(--shadow-lg)' }}>
+            <img 
+              src="/images/leather_restoration.jpeg" 
+              alt="Leather Restoration Process" 
+              style={{ width: '100%', height: 'auto', display: 'block', transform: 'scale(1.02)' }} 
+            />
           </div>
         </div>
       </section>

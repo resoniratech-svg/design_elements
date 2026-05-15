@@ -32,15 +32,35 @@ function Flooring() {
     'carpet-rugs': 'Custom Rugs'
   };
 
-  const technicalSpecs = {
-    'axminster-carpet': { material: '80% Wool / 20% Nylon', pile: '7mm to 10mm', usage: 'Luxury Hotels, Grand Ballrooms' },
-    'print-carpet': { material: '100% Nylon 6.6', pile: '5mm to 8mm', usage: 'Corridors, Commercial Offices' },
-    'tufted-carpet': { material: '100% Wool or Silk Blend', pile: 'Custom Height', usage: 'Executive Suites, Luxury Residential' },
-    'carpet-tiles': { material: 'Solution Dyed Nylon', pile: '3mm to 5mm', usage: 'Modern Offices, Schools' },
-    'carpet-rugs': { material: 'Bespoke Handmade Wool', pile: 'Variable', usage: 'Statement Areas, Private Villas' }
+  const categoryInfo = {
+    'axminster-carpet': {
+      description: 'Axminster carpets are known for durability, rich patterns, and premium appearance.',
+      uses: ['Luxury hotels', 'Banquet halls', 'Casinos', 'Corridors & lobbies', 'Convention centers'],
+      image: '/images/luxury_axminster_hotel_carpet.png'
+    },
+    'carpet-rugs': {
+      description: 'Custom rugs are made according to required size, color, and design.',
+      uses: ['Living rooms', 'Bedrooms', 'Offices', 'Villas & luxury homes', 'Designer interiors'],
+      image: '/images/bespoke_custom_rug_luxury.png'
+    },
+    'carpet-tiles': {
+      description: 'Carpet tiles are easy to install and replace.',
+      uses: ['Corporate offices', 'IT companies', 'Schools & colleges', 'Airports', 'Commercial buildings'],
+      image: '/images/modern_office_carpet_tiles.png'
+    },
+    'print-carpet': {
+      description: 'Printed carpets allow customized patterns and vibrant designs.',
+      uses: ['Hotels', 'Event halls', 'Exhibition areas', 'Restaurants', 'Home interiors'],
+      image: '/images/printed_carpet_restaurant_design.png'
+    },
+    'tufted-carpet': {
+      description: 'Tufted carpets are soft, stylish, and comfortable for indoor use.',
+      uses: ['Homes', 'Hotels', 'Lounges', 'Bedrooms', 'Premium office spaces'],
+      image: '/images/soft_tufted_bedroom_carpet.png'
+    }
   };
 
-  const currentSpecs = technicalSpecs[activeCategory] || technicalSpecs['axminster-carpet'];
+  const activeInfo = categoryInfo[activeCategory];
 
   return (
     <div style={{ minHeight: '100vh', background: '#fff' }}>
@@ -105,7 +125,7 @@ function Flooring() {
           </div>
 
           {/* Gallery Filters */}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '4rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
             {Object.keys(patterns).map(key => (
               <button 
                 key={key}
@@ -125,6 +145,31 @@ function Flooring() {
                 {categoryLabels[key] || key}
               </button>
             ))}
+          </div>
+
+          {/* Active Category Info */}
+          <div style={{ background: '#fff', padding: '2.5rem', borderRadius: '16px', marginBottom: '4rem', boxShadow: '0 10px 40px rgba(0,0,0,0.06)', border: '1px solid rgba(0,0,0,0.05)', textAlign: 'left' }}>
+            <div className="grid" style={{ gridTemplateColumns: '0.8fr 1.2fr 1.5fr', gap: '2rem', alignItems: 'center' }}>
+               <div style={{ height: '220px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.1)' }}>
+                  <img src={activeInfo.image} alt={categoryLabels[activeCategory]} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+               </div>
+               <div>
+                  <h3 style={{ fontSize: '2rem', color: 'var(--primary)', marginBottom: '1rem' }}>{categoryLabels[activeCategory]}</h3>
+                  <p style={{ color: 'var(--text-light)', fontSize: '1.15rem', lineHeight: '1.7' }}>
+                    {activeInfo.description}
+                  </p>
+               </div>
+               <div style={{ background: 'var(--bg-light)', padding: '2rem', borderRadius: '12px', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                  <h4 style={{ fontSize: '0.9rem', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '1.2rem', letterSpacing: '0.1em', fontWeight: 700 }}>Recommended For:</h4>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem' }}>
+                    {activeInfo.uses.map((use, i) => (
+                      <span key={i} style={{ background: '#fff', color: '#444', border: '1px solid var(--border)', padding: '0.6rem 1.2rem', borderRadius: '30px', fontSize: '0.85rem', fontWeight: 600, boxShadow: '0 2px 5px rgba(0,0,0,0.02)' }}>
+                        ✓ {use}
+                      </span>
+                    ))}
+                  </div>
+               </div>
+            </div>
           </div>
           
           <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2rem' }}>
