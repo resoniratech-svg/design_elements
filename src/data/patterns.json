@@ -19,7 +19,6 @@
   ],
   "carpet-rugs": [
     "/images/carpet-rugs/carpet-rugs-10.jpg",
-    "/images/carpet-rugs/carpet-rugs-14.jpg",
     "/images/carpet-rugs/carpet-rugs-9.jpg",
     "/images/carpet-rugs/carpet-rugs-12.jpg",
     "/images/carpet-rugs/carpet-rugs-5.jpg",
@@ -29,11 +28,20 @@
     "/images/carpet-rugs/carpet-rugs-7.jpg",
     "/images/carpet-rugs/carpet-rugs-32.jpg",
     "/images/carpet-rugs/carpet-rugs-19.jpg",
-    "/images/carpet-rugs/carpet-rugs-22.jpg",
     "/images/carpet-rugs/carpet-rugs-49.jpg",
+    "/images/carpet-rugs/carpet-rugs-22.jpg",
     "/images/carpet-rugs/carpet-rugs-29.jpg",
     "/images/carpet-rugs/carpet-rugs-20.jpg",
-    "/images/carpet-rugs/carpet-rugs-44.jpg"
+    "/images/carpet-rugs/carpet-rugs-44.jpg",
+    "/images/carpet-rugs/carpet-rugs-8.jpg"
+  ],
+  "carpet-tiles": [
+    "/images/carpet-tiles/Carpet tiles_pages-to-jpg-0005.jpg",
+    "/images/carpet-tiles/Carpet tiles_pages-to-jpg-0006.jpg",
+    "/images/carpet-tiles/Carpet tiles_pages-to-jpg-0007.jpg",
+    "/images/carpet-tiles/Carpet tiles_pages-to-jpg-0008.jpg",
+    "/images/carpet-tiles/Carpet tiles_pages-to-jpg-0009.jpg",
+    "/images/carpet-tiles/Carpet tiles_pages-to-jpg-0010.jpg"
   ],
   "print-carpet": [
     "/images/print-carpet/print-carpet-34.jpg",
@@ -51,26 +59,14 @@
     "/images/print-carpet/print-carpet-33.jpg",
     "/images/print-carpet/print-carpet-22.jpg",
     "/images/print-carpet/print-carpet-47.jpg",
-    "/images/print-carpet/print-carpet-14.jpg"
+    "/images/print-carpet/print-carpet-14.jpg",
+    "/images/print-carpet/print-carpet-24.jpg"
   ],
   "tufted-carpet": [
-    "/images/tufted-carpet/Tufted carpet_page-0014.jpg",
+    "/images/tufted-carpet/Tufted carpet_page-0008.jpg",
     "/images/tufted-carpet/Tufted carpet_page-0009.jpg",
-    "/images/tufted-carpet/Tufted carpet_page-0002.jpg",
-    "/images/tufted-carpet/Tufted carpet_page-0006.jpg",
-    "/images/tufted-carpet/Tufted carpet_page-0003.jpg",
-    "/images/tufted-carpet/Tufted carpet_page-0005.jpg",
-    "/images/tufted-carpet/Tufted carpet_page-0007.jpg",
-    "/images/tufted-carpet/Tufted carpet_page-0001.jpg",
+    "/images/tufted-carpet/Tufted carpet_page-0010.jpg",
+    "/images/tufted-carpet/Tufted carpet_page-0011.jpg",
     "/images/tufted-carpet/Tufted carpet_page-0012.jpg"
-  ],
-  "carpet-tiles": [
-    "/images/carpet-tiles/Carpet tiles_pages-to-jpg-0008.jpg",
-    "/images/carpet-tiles/Carpet tiles_pages-to-jpg-0007.jpg",
-    "/images/carpet-tiles/Carpet tiles_pages-to-jpg-0009.jpg",
-    "/images/carpet-tiles/Carpet tiles_pages-to-jpg-0004.jpg",
-    "/images/carpet-tiles/Carpet tiles_pages-to-jpg-0010.jpg",
-    "/images/carpet-tiles/Carpet tiles_pages-to-jpg-0006.jpg",
-    "/images/carpet-tiles/Carpet tiles_pages-to-jpg-0005.jpg"
   ]
 }
