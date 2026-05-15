@@ -19,7 +19,7 @@ function Contact() {
       </nav>
 
       <section className="section-padding">
-        <div className="container grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '5rem' }}>
+        <div className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
           <div>
             <h1 style={{ fontSize: '3rem', marginBottom: '2rem' }}>Let's Connect</h1>
             <p style={{ color: '#6b7280', fontSize: '1.1rem', marginBottom: '3rem' }}>
@@ -53,17 +53,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className="card" style={{ padding: '4rem', background: '#f9fafb', border: 'none' }}>
-            <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem' }}>Send an Inquiry</h3>
-            <form name="contact" method="POST" data-netlify="true" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <input type="hidden" name="form-name" value="contact" />
-              <input type="text" name="name" placeholder="Full Name" required style={{ padding: '1.2rem', border: '1px solid #ddd', background: '#fff' }} />
-              <input type="email" name="email" placeholder="Email Address" required style={{ padding: '1.2rem', border: '1px solid #ddd', background: '#fff' }} />
-              <input type="tel" name="phone" placeholder="Phone Number" style={{ padding: '1.2rem', border: '1px solid #ddd', background: '#fff' }} />
-              <textarea name="message" placeholder="Tell us about your requirements..." required style={{ padding: '1.2rem', border: '1px solid #ddd', background: '#fff', minHeight: '150px' }}></textarea>
-              <button type="submit" className="button-primary" style={{ width: '100%' }}>Submit Request</button>
-            </form>
-          </div>
+
         </div>
       </section>
     </div>

@@ -91,7 +91,7 @@ function Furniture() {
             </div>
           </div>
           <div>
-            <img src="/images/LEATHER AND FABRIC UPHOLSTERY.jpeg" alt="Home Collection" className="brochure-image-rounded" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '160px 0 160px 0' }} />
+            <img src="/images/leather_fabric.jpeg" alt="Home Collection" className="brochure-image-rounded" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '160px 0 160px 0' }} />
           </div>
         </div>
       </section>
@@ -100,7 +100,7 @@ function Furniture() {
       <section id="office-solutions" className="section-padding" style={{ background: 'var(--bg-light)' }}>
         <div className="container grid" style={{ gridTemplateColumns: '0.8fr 1.2fr', alignItems: 'center', gap: '4rem' }}>
           <div>
-            <img src="/images/LEATHER RESTORATION WORK.jpeg" alt="Office Solutions" className="brochure-image-rounded" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '0 160px 0 160px' }} />
+            <img src="/images/modern_office_furniture.png" alt="Office Solutions" className="brochure-image-rounded" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '0 160px 0 160px' }} />
           </div>
           <div>
             <h2 style={{ fontSize: '0.8rem', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.3em', marginBottom: '1.5rem' }}>Commercial</h2>
@@ -125,7 +125,7 @@ function Furniture() {
       <footer className="section-padding" style={{ background: '#111', color: 'white', textAlign: 'center' }}>
         <div className="container">
           <h2 style={{ color: 'white' }}>Transform your space today</h2>
-          <Link to="/contact" className="button-primary" style={{ marginTop: '2rem' }}>Inquire Now</Link>
+          <Link to="/contact" className="button-primary" style={{ marginTop: '2rem' }}>Contact Us</Link>
         </div>
       </footer>
     </div>

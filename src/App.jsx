@@ -105,7 +105,7 @@ function HomePage() {
           <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem' }}>
             <div className="card">
               <div className="card-img-container">
-                <img src="/images/spc_lvt_flooring.jpeg" alt="Flooring" />
+                <img src="/images/luxury_lvt_flooring.png" alt="Flooring" />
               </div>
               <div style={{ padding: '2.5rem' }}>
                 <h3 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>Flooring</h3>
@@ -135,7 +135,7 @@ function HomePage() {
             </div>
             <div className="card">
               <div className="card-img-container">
-                <img src="/images/drapery_curtains.jpeg" alt="Window Treatments" />
+                <img src="/images/luxury_window_blinds_curtains.png" alt="Window Treatments" />
               </div>
               <div style={{ padding: '2.5rem' }}>
                 <h3 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>Window Blinds & Curtains</h3>

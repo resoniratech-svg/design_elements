@@ -17,8 +17,8 @@ function Gallery() {
   };
 
   const projects = [
-    { title: "Business Bay Executive Offices", category: "Commercial", img: "/images/leather_fabric.jpeg", scope: "Flooring & Furniture" },
-    { title: "Palm Jumeirah Luxury Villa", category: "Residential", img: "/images/drapery_curtains.jpeg", scope: "Window Treatments & Wallpaper" },
+    { title: "Business Bay Executive Offices", category: "Commercial", img: "/images/modern_office_furniture.png", scope: "Flooring & Furniture" },
+    { title: "Palm Jumeirah Luxury Villa", category: "Residential", img: "/images/luxury_window_blinds_curtains.png", scope: "Window Treatments & Wallpaper" },
     { title: "Downtown Dubai Retail Space", category: "Commercial", img: "/images/porcelain_tiles.png", scope: "Porcelain Tiles" },
     { title: "Modern Marina Apartment", category: "Residential", img: "/images/luxury_lvt_flooring.png", scope: "LVT Flooring" },
     { title: "Boutique Hotel Lobby", category: "Commercial", img: "/images/luxury_carpet_hero.png", scope: "Custom Axminster Carpets" },

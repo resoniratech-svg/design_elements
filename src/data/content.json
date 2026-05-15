@@ -39,7 +39,7 @@
           "name": "Resilient Vinyl Flooring",
           "description": "Made from synthetic materials such as PVC. Known for durability, water resistance, and ease of maintenance.",
           "types": ["Homogeneous", "Heterogeneous", "LVT", "SPC"],
-          "image": "/images/vinyl_flooring.jpeg"
+          "image": "/images/luxury_lvt_flooring.png"
         },
         {
           "name": "SPC & LVT Flooring",
@@ -66,12 +66,12 @@
         {
           "name": "Decking",
           "description": "Premium outdoor decking solutions for terraces and balconies.",
-          "image": "/images/wooden_herringbone.jpeg"
+          "image": "/images/outdoor_decking_wpc.png"
         },
         {
           "name": "Parquet Flooring",
           "description": "Classic and elegant wooden flooring patterns.",
-          "image": "/images/wooden_herringbone.jpeg"
+          "image": "/images/vibrant_engineered_hardwood.png"
         },
         {
           "name": "Porcelain & Vitrified Tiles",
@@ -100,7 +100,7 @@
         "name": "Curtains",
         "description": "Tailored curtain solutions for every interior style."
       },
-      "image": "/images/drapery_curtains.jpeg"
+      "image": "/images/luxury_window_blinds_curtains.png"
     }
   },
   "clients": [

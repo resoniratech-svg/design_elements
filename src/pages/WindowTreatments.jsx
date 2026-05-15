@@ -35,7 +35,7 @@ function WindowTreatments() {
             </div>
           </div>
           <div className="hero-image">
-            <img src="/images/drapery_curtains.jpeg" alt="Elegant Window Treatments" className="brochure-image-rounded" style={{ width: '100%', height: '500px', objectFit: 'cover' }} />
+            <img src="/images/luxury_window_blinds_curtains.png" alt="Elegant Window Treatments" className="brochure-image-rounded" style={{ width: '100%', height: '500px', objectFit: 'cover' }} />
           </div>
         </div>
       </header>
@@ -75,7 +75,7 @@ function WindowTreatments() {
             </div>
           </div>
           <div>
-            <img src="/images/window_blinds.jpeg" alt="Modern Blinds" className="brochure-image-rounded" style={{ width: '100%', height: '450px', objectFit: 'cover', borderRadius: '40px 0 40px 0' }} />
+            <img src="/images/luxury_window_blinds_curtains.png" alt="Modern Blinds" className="brochure-image-rounded" style={{ width: '100%', height: '450px', objectFit: 'cover', borderRadius: '40px 0 40px 0' }} />
           </div>
         </div>
       </section>
@@ -142,7 +142,7 @@ function WindowTreatments() {
           </div>
 
           <div style={{ marginTop: '5rem', borderRadius: '40px', overflow: 'hidden', height: '400px' }}>
-            <img src="/images/drapery_curtains.jpeg" alt="Luxury Curtain Display" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/images/luxury_window_blinds_curtains.png" alt="Luxury Curtain Display" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
         </div>
       </section>
