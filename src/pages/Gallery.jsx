@@ -1,17 +1,28 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
+import GlobalSearch from '../components/GlobalSearch';
 
 function Gallery() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [filter, setFilter] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
+  const searchQuery = searchParams.get('search') || '';
+
+  const handleSearch = (e) => {
+    const value = e.target.value;
+    if (value) {
+      setSearchParams({ search: value });
+    } else {
+      setSearchParams({});
+    }
+  };
 
   const projects = [
     { title: "Business Bay Executive Offices", category: "Commercial", img: "/images/leather_fabric.jpeg", scope: "Flooring & Furniture" },
     { title: "Palm Jumeirah Luxury Villa", category: "Residential", img: "/images/drapery_curtains.jpeg", scope: "Window Treatments & Wallpaper" },
     { title: "Downtown Dubai Retail Space", category: "Commercial", img: "/images/porcelain_tiles.png", scope: "Porcelain Tiles" },
-    { title: "Modern Marina Apartment", category: "Residential", img: "/images/spc_lvt_flooring.jpeg", scope: "LVT Flooring" },
+    { title: "Modern Marina Apartment", category: "Residential", img: "/images/luxury_lvt_flooring.png", scope: "LVT Flooring" },
     { title: "Boutique Hotel Lobby", category: "Commercial", img: "/images/luxury_carpet_hero.png", scope: "Custom Axminster Carpets" },
-    { title: "Suburban Family Home", category: "Residential", img: "/images/wooden_herringbone.jpeg", scope: "Engineered Hardwood" },
+    { title: "Suburban Family Home", category: "Residential", img: "/images/vibrant_engineered_hardwood.png", scope: "Engineered Hardwood" },
     { title: "Corporate Headquarters", category: "Commercial", img: "/images/carpet_tiles_category.png", scope: "Geometric Carpet Tiles" },
     { title: "Grand Ballroom Renovation", category: "Commercial", img: "/images/axminster-carpet/Axminster carpet_page-0015.jpg", scope: "Bespoke Broadloom" },
     { title: "Luxury Penthouse Suite", category: "Residential", img: "/images/custom_rugs_category.png", scope: "Hand-Tufted Rugs" },
@@ -55,7 +66,7 @@ function Gallery() {
                 type="text" 
                 placeholder="Search projects by name or scope..." 
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={handleSearch}
                 style={{ width: '100%', padding: '1rem 1.5rem', borderRadius: '30px', border: '1px solid var(--border)', fontSize: '1rem', outline: 'none', background: '#f9fafb' }}
               />
             </div>
@@ -120,3 +131,4 @@ function Gallery() {
 }
 
 export default Gallery;
+

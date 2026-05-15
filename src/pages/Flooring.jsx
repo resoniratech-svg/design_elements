@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import GlobalSearch from '../components/GlobalSearch';
 import content from '../data/content.json';
 import patterns from '../data/patterns.json';
 
@@ -294,3 +295,4 @@ function Flooring() {
 }
 
 export default Flooring;
+

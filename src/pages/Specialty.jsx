@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import GlobalSearch from '../components/GlobalSearch';
 
 function Specialty() {
   const items = [
@@ -24,7 +25,7 @@ function Specialty() {
     {
       title: "Outdoor Decking (WPC)",
       desc: "Weather-resistant Wood Plastic Composite decking. Perfect for swimming pool surrounds, terraces, and high-traffic outdoor areas.",
-      img: "/images/wooden_herringbone.jpeg",
+      img: "/images/outdoor_decking_wpc.png",
       tags: ["Weather Resistant", "Anti-Slip", "Eco-Friendly"]
     },
     {
@@ -93,3 +94,4 @@ function Specialty() {
 }
 
 export default Specialty;
+

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import GlobalSearch from './components/GlobalSearch';
 import content from './data/content.json';
 import Flooring from './pages/Flooring';
 import Furniture from './pages/Furniture';
@@ -25,6 +26,7 @@ function HomePage() {
             <Link to="/gallery" style={{ textDecoration: 'none', color: 'var(--text)', fontWeight: 600, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Portfolio</Link>
             <Link to="/specialty" style={{ textDecoration: 'none', color: 'var(--text)', fontWeight: 600, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Specialty</Link>
             <Link to="/contact" style={{ textDecoration: 'none', color: 'var(--text)', fontWeight: 600, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Contact</Link>
+            <GlobalSearch />
           </div>
         </div>
       </nav>
