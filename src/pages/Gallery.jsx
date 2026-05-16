@@ -41,16 +41,16 @@ function Gallery() {
   return (
     <div style={{ minHeight: '100vh', background: '#fff' }}>
       <nav className="glass-nav">
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px' }}>
-          <Link to="/" style={{ textDecoration: 'none', color: '#111', fontWeight: 800, fontSize: '0.9rem', letterSpacing: '0.05em' }}>&larr; BACK TO HOME</Link>
-          <div style={{ color: 'var(--accent)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.2em' }}>OUR PORTFOLIO</div>
+        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '70px', gap: '1rem' }}>
+          <Link to="/" style={{ textDecoration: 'none', color: '#111', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.05em' }}>&larr; BACK TO HOME</Link>
+          <div style={{ color: 'var(--accent)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.75rem', letterSpacing: '0.15em' }} className="hidden-mobile">OUR PORTFOLIO</div>
         </div>
       </nav>
 
       <header className="section-padding" style={{ background: 'var(--bg-light)', textAlign: 'center' }}>
         <div className="container">
-          <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem' }}>Our Work</h1>
-          <p style={{ margin: '0 auto', color: 'var(--text-light)', maxWidth: '700px', fontSize: '1.15rem' }}>
+          <h1 style={{ fontSize: 'clamp(2.2rem, 8vw, 3.5rem)', marginBottom: '1.5rem' }}>Our Work</h1>
+          <p style={{ margin: '0 auto', color: 'var(--text-light)', maxWidth: '700px', fontSize: '1.1rem' }}>
             Explore our latest projects showcasing our commitment to quality, innovative design, and flawless execution across residential and commercial spaces.
           </p>
         </div>
@@ -94,24 +94,23 @@ function Gallery() {
           </div>
 
           {/* Grid */}
-          <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '2.5rem' }}>
+          <div className="grid" style={{ gap: '2.5rem' }}>
             {filteredProjects.map((p, i) => (
-              <div key={i} className="card" style={{ border: 'none', overflow: 'hidden', borderRadius: '16px', position: 'relative', group: 'true' }}>
-                <div style={{ height: '400px', overflow: 'hidden', position: 'relative' }}>
-                  <img src={p.img} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)' }} className="portfolio-image" />
+              <div key={i} className="card" style={{ border: 'none', overflow: 'hidden', borderRadius: '16px', position: 'relative' }}>
+                <div style={{ height: 'auto', minHeight: '350px', maxHeight: '450px', overflow: 'hidden', position: 'relative' }}>
+                  <img src={p.img} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} className="portfolio-image" />
                   
                   {/* Hover Overlay */}
                   <div style={{
                     position: 'absolute',
                     bottom: 0, left: 0, right: 0,
-                    background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)',
-                    padding: '2rem',
+                    background: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent)',
+                    padding: '2rem 1.5rem',
                     color: 'white',
-                    transform: 'translateY(0)', // Keep it visible for "easy to understand" UI, but styled elegantly
                   }}>
-                    <div style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>{p.category}</div>
-                    <h3 style={{ fontSize: '1.4rem', color: '#fff', marginBottom: '0.5rem', lineHeight: '1.2' }}>{p.title}</h3>
-                    <p style={{ color: '#ccc', fontSize: '0.9rem' }}>{p.scope}</p>
+                    <div style={{ fontSize: '0.7rem', fontWeight: 800, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>{p.category}</div>
+                    <h3 style={{ fontSize: '1.3rem', color: '#fff', marginBottom: '0.5rem', lineHeight: '1.2' }}>{p.title}</h3>
+                    <p style={{ color: '#ccc', fontSize: '0.85rem' }}>{p.scope}</p>
                   </div>
                 </div>
               </div>

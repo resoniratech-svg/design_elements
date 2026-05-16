@@ -12,21 +12,26 @@ import Contact from './pages/Contact';
 
 function HomePage() {
   const { company, services, clients, manufacturers } = content;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   return (
     <div className="app-wrapper">
       {/* Navigation */}
       <nav className="glass-nav">
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100px' }}>
+        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px' }}>
           <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
-            <img src="/images/logo.jpeg" alt="Design Elements" style={{ height: '70px', objectFit: 'contain' }} />
+            <img src="/images/logo.jpeg" alt="Design Elements" style={{ height: '60px', objectFit: 'contain' }} />
           </Link>
+          
+          {/* Desktop Links */}
           <div className="nav-links" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
             <Link to="/" style={{ textDecoration: 'none', color: 'var(--text)', fontWeight: 600, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Home</Link>
             
             {/* Services Dropdown */}
             <div className="nav-dropdown">
-              <a href="#services" style={{ textDecoration: 'none', color: 'var(--text)', fontWeight: 600, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em', cursor: 'pointer', padding: '10px 0' }}>Services</a>
+              <a style={{ textDecoration: 'none', color: 'var(--text)', fontWeight: 600, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em', cursor: 'pointer', padding: '10px 0' }}>Services</a>
               <div className="nav-dropdown-content">
                 <div className="sub-dropdown">
                   <Link to="/flooring" className="dropdown-item">
@@ -53,25 +58,57 @@ function HomePage() {
             <Link to="/contact" style={{ textDecoration: 'none', color: 'var(--text)', fontWeight: 600, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Contact</Link>
             <GlobalSearch />
           </div>
+
+          {/* Hamburger Icon */}
+          <button className="hamburger" onClick={toggleMobileMenu}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile Nav Menu */}
+        <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}></div>
+        <div className={`mobile-nav ${isMobileMenuOpen ? 'active' : ''}`}>
+          <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '2rem' }}>
+            <button onClick={toggleMobileMenu} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <Link to="/" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Home</Link>
+            <Link to="/flooring" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Flooring</Link>
+            <Link to="/furniture" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Furniture</Link>
+            <Link to="/wallpaper" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Wallpaper</Link>
+            <Link to="/window-treatments" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Window Blinds</Link>
+            <Link to="/gallery" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Portfolio</Link>
+            <Link to="/specialty" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Specialty</Link>
+            <Link to="/contact" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Contact</Link>
+          </div>
         </div>
       </nav>
 
       {/* Hero Section */}
       <header className="section-padding" style={{ background: '#fff', position: 'relative' }}>
-        <div className="container grid" style={{ gridTemplateColumns: '1.1fr 0.9fr', alignItems: 'center', gap: '4rem' }}>
+        <div className="container grid" style={{ alignItems: 'center', gap: '4rem' }}>
           <div className="animate-fade-in">
             <span style={{ color: 'var(--accent)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.3em', fontSize: '0.75rem' }}>Premium Interior Solutions</span>
             <h1 style={{ fontSize: '4.5rem', marginTop: '1.5rem', color: '#111', lineHeight: '1.1' }}>Crafting Space <br /><span style={{ color: 'var(--accent)' }}>With Excellence.</span></h1>
             <p style={{ marginTop: '2rem', color: 'var(--text-light)', fontSize: '1.15rem', maxWidth: '500px' }}>
               {company.introduction}
             </p>
-            <div style={{ marginTop: '3.5rem', display: 'flex', gap: '1.5rem' }}>
+            <div style={{ marginTop: '3.5rem', display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
               <Link to="/flooring" className="button-primary">View Collections</Link>
               <Link to="/gallery" style={{ display: 'inline-block', padding: '1rem 0', textDecoration: 'none', color: '#111', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.9rem' }}>View Portfolio &rarr;</Link>
             </div>
           </div>
           <div className="hero-image">
-            <img src="/images/furniture.png" alt="Premium Interior Design" className="brochure-image-rounded" style={{ width: '100%', height: '650px', objectFit: 'cover' }} />
+            <img src="/images/furniture.png" alt="Premium Interior Design" className="brochure-image-rounded" style={{ width: '100%', height: 'auto', maxHeight: '650px', objectFit: 'cover' }} />
           </div>
         </div>
       </header>
@@ -80,7 +117,7 @@ function HomePage() {
       <section className="section-padding" style={{ background: 'var(--bg-light)' }}>
         <div className="container grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '6rem', alignItems: 'center' }}>
           <div>
-            <img src="/images/luxury_carpet_hero.png" alt="About Us" className="brochure-image-rounded" style={{ width: '100%', height: '500px', objectFit: 'cover', borderRadius: '160px 0 160px 0' }} />
+            <img src="/images/luxury_carpet_hero.png" alt="About Us" className="brochure-image-rounded" style={{ width: '100%', height: 'auto', maxHeight: '500px', objectFit: 'cover', borderRadius: '160px 0 160px 0' }} />
           </div>
           <div>
             <h2 style={{ fontSize: '0.8rem', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.3em', marginBottom: '1.5rem' }}>About Us</h2>
@@ -104,16 +141,16 @@ function HomePage() {
 
       {/* Mission & Vision (Page 4) */}
       <section className="section-padding">
-        <div className="container grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '4rem' }}>
-          <div style={{ padding: '4rem', background: '#111', color: 'white', borderRadius: '0 80px 0 80px' }}>
+        <div className="container grid" style={{ gap: '2rem' }}>
+          <div style={{ padding: '3rem 2rem', background: '#111', color: 'white', borderRadius: '0 80px 0 80px' }}>
             <h3 style={{ color: 'var(--accent-light)', marginBottom: '1.5rem', textTransform: 'uppercase', letterSpacing: '0.2em', fontSize: '0.9rem' }}>Our Mission</h3>
-            <p style={{ fontSize: '1.4rem', lineHeight: '1.6', fontWeight: 500 }}>
+            <p style={{ fontSize: '1.2rem', lineHeight: '1.6', fontWeight: 500 }}>
               "{company.mission}"
             </p>
           </div>
-          <div style={{ padding: '4rem', background: 'var(--accent)', color: 'white', borderRadius: '80px 0 80px 0' }}>
+          <div style={{ padding: '3rem 2rem', background: 'var(--accent)', color: 'white', borderRadius: '80px 0 80px 0' }}>
             <h3 style={{ color: '#fff', marginBottom: '1.5rem', textTransform: 'uppercase', letterSpacing: '0.2em', fontSize: '0.9rem', opacity: 0.8 }}>Our Vision</h3>
-            <p style={{ fontSize: '1.4rem', lineHeight: '1.6', fontWeight: 500 }}>
+            <p style={{ fontSize: '1.2rem', lineHeight: '1.6', fontWeight: 500 }}>
               "{company.vision}"
             </p>
           </div>
@@ -277,7 +314,7 @@ function HomePage() {
       {/* Footer */}
       <footer className="section-padding" style={{ background: '#111', color: 'white' }}>
         <div className="container">
-          <div className="grid" style={{ gridTemplateColumns: '1.5fr 1fr 1fr', gap: '3rem' }}>
+          <div className="grid" style={{ gap: '3rem' }}>
             <div>
               <div style={{ marginBottom: '2rem', background: '#fff', display: 'inline-block', padding: '10px', borderRadius: '8px' }}>
                 <img src="/images/logo.jpeg" alt="Design Elements" style={{ height: '60px' }} />
@@ -307,7 +344,7 @@ function HomePage() {
               </div>
             </div>
           </div>
-          <div style={{ marginTop: '5rem', paddingTop: '2rem', borderTop: '1px solid #222', textAlign: 'center', color: '#4b5563', fontSize: '0.8rem' }}>
+          <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid #222', textAlign: 'center', color: '#4b5563', fontSize: '0.8rem' }}>
             &copy; {new Date().getFullYear()} DESIGN ELEMENTS TRADING AND CONTRACTING W.L.L. ALL RIGHTS RESERVED.
           </div>
         </div>

@@ -41,14 +41,29 @@ h1, h2, h3, h4 {
   padding: 0 2rem;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+
 .section-padding {
   padding: 80px 0;
 }
 
 .grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 }
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* Navigation */
 .glass-nav {
@@ -61,6 +76,62 @@ h1, h2, h3, h4 {
   border-bottom: 1px solid var(--border);
   transition: all 0.3s ease;
 }
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background: white;
+  z-index: 1002;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 2rem;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav.active {
+  right: 0;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1003;
+}
+
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    display: none !important;
+  }
+}
+
 
 /* Dropdowns */
 .nav-dropdown {
@@ -288,18 +359,42 @@ h1, h2, h3, h4 {
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .grid { grid-template-columns: 1fr !important; }
+  .grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
   .clients-grid { grid-template-columns: repeat(2, 1fr); }
   .manufacturers-grid { grid-template-columns: repeat(3, 1fr); }
   .section-padding { padding: 60px 0; }
   .brochure-image-rounded { border-radius: 0 80px 0 80px; }
+  
+  h1 { font-size: 3rem !important; }
+  h2 { font-size: 2rem !important; }
+  h3 { font-size: 1.8rem !important; }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .clients-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .manufacturers-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .logo-box { height: 140px; padding: 1rem; }
+  .logo-box-text { font-size: 0.9rem; }
+  
+  .section-padding { padding: 40px 0; }
+}
+
+@media (max-width: 480px) {
   .clients-grid, .manufacturers-grid { grid-template-columns: 1fr; }
+  h1 { font-size: 2.5rem !important; }
+}
+
+
+@media (max-width: 768px) {
+  .hidden-mobile { display: none !important; }
+}
+
+@media (min-width: 769px) {
+  .hidden-desktop { display: none !important; }
 }
 
 /* Scroll To Top Button */
+
 .scroll-to-top {
   position: fixed;
   bottom: 40px;

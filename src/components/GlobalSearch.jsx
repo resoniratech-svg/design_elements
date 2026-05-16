@@ -26,7 +26,7 @@ function GlobalSearch() {
           border: '1px solid var(--border)',
           outline: 'none',
           fontSize: '0.85rem',
-          width: '180px',
+          width: 'clamp(100px, 20vw, 180px)',
           background: 'rgba(255,255,255,0.8)'
         }}
       />

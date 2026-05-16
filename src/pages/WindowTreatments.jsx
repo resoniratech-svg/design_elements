@@ -16,40 +16,40 @@ function WindowTreatments() {
   return (
     <div style={{ minHeight: '100vh', background: '#fff' }}>
       <nav className="glass-nav">
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px' }}>
-          <Link to="/" style={{ textDecoration: 'none', color: '#111', fontWeight: 800, fontSize: '0.9rem', letterSpacing: '0.05em' }}>&larr; BACK TO HOME</Link>
-          <div style={{ color: 'var(--accent)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.2em' }}>Window Blinds & Curtains</div>
+        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '70px', gap: '1rem' }}>
+          <Link to="/" style={{ textDecoration: 'none', color: '#111', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.05em' }}>&larr; BACK TO HOME</Link>
+          <div style={{ color: 'var(--accent)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.75rem', letterSpacing: '0.15em' }} className="hidden-mobile">Window Blinds & Curtains</div>
         </div>
       </nav>
 
       <header className="section-padding" style={{ background: 'var(--bg-light)', overflow: 'hidden' }}>
-        <div className="container grid" style={{ gridTemplateColumns: '1fr 1fr', alignItems: 'center', gap: '4rem' }}>
+        <div className="container grid" style={{ alignItems: 'center', gap: '4rem' }}>
           <div>
-            <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem' }}>{window_treatments.title}</h1>
-            <p style={{ color: 'var(--text-light)', fontSize: '1.15rem', lineHeight: '1.8' }}>
+            <h1 style={{ fontSize: 'clamp(2.2rem, 8vw, 3.5rem)', marginBottom: '1.5rem' }}>{window_treatments.title}</h1>
+            <p style={{ color: 'var(--text-light)', fontSize: '1.1rem', lineHeight: '1.8' }}>
               Transform your interiors with our premium window solutions. From sophisticated blinds to elegant custom-tailored curtains, we provide the perfect balance of light control, privacy, and aesthetic excellence.
             </p>
-            <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem' }}>
+            <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                <button className="button-primary" onClick={() => scrollToSection('blinds')}>Explore Blinds</button>
                <button className="button-primary" onClick={() => scrollToSection('curtains')} style={{ background: '#fff', color: '#111', border: '1px solid #111' }}>Explore Curtains</button>
             </div>
           </div>
           <div className="hero-image">
-            <img src="/images/luxury_window_blinds_curtains.png" alt="Elegant Window Treatments" className="brochure-image-rounded" style={{ width: '100%', height: '500px', objectFit: 'cover' }} />
+            <img src="/images/luxury_window_blinds_curtains.png" alt="Elegant Window Treatments" className="brochure-image-rounded" style={{ width: '100%', height: 'auto', maxHeight: '500px', objectFit: 'cover' }} />
           </div>
         </div>
       </header>
 
       {/* Window Blinds Section */}
       <section id="blinds" className="section-padding">
-        <div className="container grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
+        <div className="container grid" style={{ alignItems: 'center', gap: '4rem' }}>
           <div>
             <h2 style={{ fontSize: '0.8rem', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.3em', marginBottom: '1.5rem' }}>Precision Control</h2>
-            <h3 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>{window_treatments.blinds.name}</h3>
+            <h3 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>{window_treatments.blinds.name}</h3>
             <p style={{ color: 'var(--text-light)', marginBottom: '2rem', fontSize: '1.1rem', lineHeight: '1.8' }}>
               Our high-performance blinds offer unmatched versatility for both residential and commercial spaces. Engineered for durability and ease of use, they provide precise light filtration and energy efficiency.
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+            <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '2rem' }}>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontWeight: 600 }}>
                   <span style={{ color: 'var(--accent)' }}>✓</span> Roller Blinds
@@ -75,7 +75,7 @@ function WindowTreatments() {
             </div>
           </div>
           <div>
-            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop" alt="Modern Blinds" className="brochure-image-rounded" style={{ width: '100%', height: '450px', objectFit: 'cover', borderRadius: '40px 0 40px 0' }} />
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop" alt="Modern Blinds" className="brochure-image-rounded" style={{ width: '100%', height: 'auto', maxHeight: '450px', objectFit: 'cover', borderRadius: '40px 0 40px 0' }} />
           </div>
         </div>
       </section>
@@ -91,7 +91,7 @@ function WindowTreatments() {
             </p>
           </div>
 
-          <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2.5rem' }}>
+          <div className="grid" style={{ gap: '2.5rem' }}>
             {[
               { 
                 title: "Drapery Curtains", 
@@ -141,8 +141,8 @@ function WindowTreatments() {
             ))}
           </div>
 
-          <div style={{ marginTop: '5rem', borderRadius: '40px', overflow: 'hidden', height: '400px' }}>
-            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop" alt="Luxury Curtain Display" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <div style={{ marginTop: '4rem', borderRadius: '20px', overflow: 'hidden', height: 'auto', maxHeight: '400px' }}>
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop" alt="Luxury Curtain Display" style={{ width: '100%', height: 'auto', display: 'block' }} />
           </div>
         </div>
       </section>

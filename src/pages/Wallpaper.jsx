@@ -9,50 +9,50 @@ function Wallpaper() {
   return (
     <div style={{ minHeight: '100vh', background: '#fff' }}>
       <nav className="glass-nav">
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px' }}>
-          <Link to="/" style={{ textDecoration: 'none', color: '#111', fontWeight: 800, fontSize: '0.9rem', letterSpacing: '0.05em' }}>&larr; BACK TO HOME</Link>
-          <div style={{ color: 'var(--accent)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.2em' }}>Wall Coverings</div>
+        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '70px', gap: '1rem' }}>
+          <Link to="/" style={{ textDecoration: 'none', color: '#111', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.05em' }}>&larr; BACK TO HOME</Link>
+          <div style={{ color: 'var(--accent)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.75rem', letterSpacing: '0.15em' }} className="hidden-mobile">Wall Coverings</div>
         </div>
       </nav>
 
       <header className="section-padding" style={{ background: 'var(--bg-light)', textAlign: 'center' }}>
         <div className="container">
-          <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem' }}>{wallpaper.title}</h1>
-          <p style={{ margin: '0 auto', color: 'var(--text-light)', maxWidth: '700px', fontSize: '1.15rem' }}>
+          <h1 style={{ fontSize: 'clamp(2.2rem, 8vw, 3.5rem)', marginBottom: '1.5rem' }}>{wallpaper.title}</h1>
+          <p style={{ margin: '0 auto', color: 'var(--text-light)', maxWidth: '700px', fontSize: '1.1rem' }}>
             {wallpaper.description}
           </p>
         </div>
       </header>
 
       <section className="section-padding">
-        <div className="container grid" style={{ gridTemplateColumns: '1.2fr 0.8fr', alignItems: 'center', gap: '5rem' }}>
+        <div className="container grid" style={{ alignItems: 'center', gap: '3rem' }}>
           <div>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '2rem' }}>Artistic Wall Solutions</h2>
+            <h2 style={{ fontSize: '2.2rem', marginBottom: '2rem' }}>Artistic Wall Solutions</h2>
             <p style={{ color: 'var(--text-light)', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem' }}>
               Our extensive collection includes textured, fabric-backed, and custom-printed wallpapers sourced from the world's most prestigious designers. Whether you're looking for subtle elegance or a bold statement piece, we have the perfect covering for your walls.
             </p>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1.5rem', marginBottom: '3rem' }}>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-                <div style={{ background: 'var(--accent-light)', color: 'white', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', fontWeight: 800 }}>1</div>
-                <div style={{ fontWeight: 600, fontSize: '1.1rem' }}>Textured Fabric Wallpapers</div>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2.5rem' }}>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '1.2rem' }}>
+                <div style={{ background: 'var(--accent-light)', color: 'white', width: '35px', height: '35px', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', fontWeight: 800 }}>1</div>
+                <div style={{ fontWeight: 600, fontSize: '1.05rem' }}>Textured Fabric Wallpapers</div>
               </li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-                <div style={{ background: 'var(--accent-light)', color: 'white', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', fontWeight: 800 }}>2</div>
-                <div style={{ fontWeight: 600, fontSize: '1.1rem' }}>Eco-Friendly Materials</div>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '1.2rem' }}>
+                <div style={{ background: 'var(--accent-light)', color: 'white', width: '35px', height: '35px', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', fontWeight: 800 }}>2</div>
+                <div style={{ fontWeight: 600, fontSize: '1.05rem' }}>Eco-Friendly Materials</div>
               </li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-                <div style={{ background: 'var(--accent-light)', color: 'white', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', fontWeight: 800 }}>3</div>
-                <div style={{ fontWeight: 600, fontSize: '1.1rem' }}>Custom Mural Printing</div>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '1.2rem' }}>
+                <div style={{ background: 'var(--accent-light)', color: 'white', width: '35px', height: '35px', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', fontWeight: 800 }}>3</div>
+                <div style={{ fontWeight: 600, fontSize: '1.05rem' }}>Custom Mural Printing</div>
               </li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-                <div style={{ background: 'var(--accent-light)', color: 'white', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', fontWeight: 800 }}>4</div>
-                <div style={{ fontWeight: 600, fontSize: '1.1rem' }}>Professional Installation</div>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '1.2rem' }}>
+                <div style={{ background: 'var(--accent-light)', color: 'white', width: '35px', height: '35px', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', fontWeight: 800 }}>4</div>
+                <div style={{ fontWeight: 600, fontSize: '1.05rem' }}>Professional Installation</div>
               </li>
             </ul>
             <button className="button-primary">Request Samples</button>
           </div>
           <div>
-            <img src="/images/wallpaper.png" alt="Wallpaper Texture" className="brochure-image-rounded" style={{ width: '100%', height: '600px', objectFit: 'cover' }} />
+            <img src="/images/wallpaper.png" alt="Wallpaper Texture" className="brochure-image-rounded" style={{ width: '100%', height: 'auto', maxHeight: '600px', objectFit: 'cover' }} />
           </div>
         </div>
       </section>
@@ -63,7 +63,7 @@ function Wallpaper() {
              <h2 style={{ color: 'white', fontSize: '2.5rem' }}>Exquisite Patterns & Textures</h2>
              <p style={{ color: 'var(--text-light)', marginTop: '1rem' }}>Transform your walls with our premium collections.</p>
            </div>
-           <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+           <div className="grid" style={{ gap: '2rem' }}>
              <div className="card" style={{ background: 'transparent', border: 'none' }}>
                 <img src="/images/wallpaper_living_room.png" alt="Residential Wallpaper" style={{ width: '100%', height: '350px', objectFit: 'cover', borderRadius: '12px', marginBottom: '1.5rem' }} />
                 <h3 style={{ color: 'var(--accent-light)', marginBottom: '1rem', fontSize: '1.4rem' }}>Residential</h3>

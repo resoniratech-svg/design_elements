@@ -45,16 +45,16 @@ function Specialty() {
   return (
     <div style={{ minHeight: '100vh', background: '#fff' }}>
       <nav className="glass-nav">
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px' }}>
-          <Link to="/" style={{ textDecoration: 'none', color: '#111', fontWeight: 800, fontSize: '0.9rem', letterSpacing: '0.05em' }}>&larr; BACK TO HOME</Link>
-          <div style={{ color: 'var(--accent)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.2em' }}>SPECIALTY PRODUCTS</div>
+        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '70px', gap: '1rem' }}>
+          <Link to="/" style={{ textDecoration: 'none', color: '#111', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.05em' }}>&larr; BACK TO HOME</Link>
+          <div style={{ color: 'var(--accent)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.75rem', letterSpacing: '0.15em' }} className="hidden-mobile">SPECIALTY PRODUCTS</div>
         </div>
       </nav>
 
       <header className="section-padding" style={{ background: 'var(--bg-light)', textAlign: 'center' }}>
         <div className="container">
-          <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem' }}>Specialty Solutions</h1>
-          <p style={{ margin: '0 auto', color: 'var(--text-light)', maxWidth: '700px', fontSize: '1.15rem' }}>
+          <h1 style={{ fontSize: 'clamp(2.2rem, 8vw, 3.5rem)', marginBottom: '1.5rem' }}>Specialty Solutions</h1>
+          <p style={{ margin: '0 auto', color: 'var(--text-light)', maxWidth: '700px', fontSize: '1.1rem' }}>
             Beyond standard interiors, we provide high-performance solutions for specialized environments, from athletic courts to high-tech server rooms.
           </p>
         </div>
@@ -62,7 +62,7 @@ function Specialty() {
 
       <section className="section-padding">
         <div className="container">
-          <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '3rem' }}>
+          <div className="grid" style={{ gap: '3rem' }}>
             {items.map((item, index) => (
               <div key={index} className="card" style={{ border: '1px solid var(--border)', borderRadius: '16px', overflow: 'hidden', background: '#fff' }}>
                 <div style={{ height: '250px', overflow: 'hidden' }}>

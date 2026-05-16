@@ -84,9 +84,9 @@ function Flooring() {
     <div style={{ minHeight: '100vh', background: '#fff' }}>
       {/* Navigation */}
       <nav className="glass-nav">
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px' }}>
-          <Link to="/" style={{ textDecoration: 'none', color: '#111', fontWeight: 800, fontSize: '0.9rem', letterSpacing: '0.05em' }}>&larr; BACK TO HOME</Link>
-          <div style={{ color: 'var(--accent)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.2em' }}>Flooring Solutions</div>
+        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '70px', gap: '1rem' }}>
+          <Link to="/" style={{ textDecoration: 'none', color: '#111', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.05em' }}>&larr; BACK TO HOME</Link>
+          <div style={{ color: 'var(--accent)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.75rem', letterSpacing: '0.15em' }} className="hidden-mobile">Flooring Solutions</div>
         </div>
       </nav>
 
@@ -102,14 +102,14 @@ function Flooring() {
 
       {/* Carpet Specialist Hero */}
       <section className="section-padding" style={{ background: '#111', color: 'white', borderBottom: '1px solid #222' }}>
-        <div className="container grid" style={{ gridTemplateColumns: '1.2fr 0.8fr', gap: '5rem', alignItems: 'center' }}>
-          <div>
+        <div className="container grid" style={{ alignItems: 'center' }}>
+          <div className="animate-fade-in">
             <h2 style={{ fontSize: '0.8rem', color: 'var(--accent-light)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: '1.5rem' }}>Heritage & Excellence</h2>
             <h3 style={{ fontSize: '3.5rem', marginBottom: '2rem', color: 'white' }}>World-Class Carpet Solutions</h3>
-            <p style={{ color: '#aaa', fontSize: '1.15rem', lineHeight: '1.8', marginBottom: '3rem' }}>
+            <p style={{ color: '#aaa', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '3rem' }}>
               Established in 1958, our manufacturing partners operate the world's largest Axminster carpet mill. With a heritage of over 60 years in classical design and hospitality excellence, we deliver certified quality through ISO9001 and ISO14001 standards, ensuring your project meets the highest global specifications.
             </p>
-            <div className="grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+            <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
                <div style={{ padding: '2rem', background: '#222', borderRadius: '12px' }}>
                   <h4 style={{ color: 'var(--accent-light)', marginBottom: '0.5rem' }}>Global Reach</h4>
                   <p style={{ fontSize: '0.85rem', color: '#888' }}>Installed in over 1,000 five-star hotels across five continents.</p>
@@ -125,7 +125,7 @@ function Flooring() {
               src="/images/luxury_carpet_hero.png" 
               alt="Luxury Carpet" 
               className="brochure-image-rounded" 
-              style={{ width: '100%', height: '550px', objectFit: 'cover' }} 
+              style={{ width: '100%', height: 'auto', maxHeight: '550px', objectFit: 'cover' }} 
               onError={(e) => { e.target.onerror = null; e.target.src="/images/flooring.png"; }}
             />
           </div>
@@ -166,14 +166,14 @@ function Flooring() {
           </div>
 
           {/* Active Category Info */}
-          <div style={{ background: '#fff', padding: '2.5rem', borderRadius: '16px', marginBottom: '4rem', boxShadow: '0 10px 40px rgba(0,0,0,0.06)', border: '1px solid rgba(0,0,0,0.05)', textAlign: 'left' }}>
-            <div className="grid" style={{ gridTemplateColumns: '0.8fr 1.2fr 1.5fr', gap: '2rem', alignItems: 'center' }}>
-               <div style={{ height: '220px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.1)' }}>
+          <div style={{ background: '#fff', padding: 'clamp(1.5rem, 5vw, 2.5rem)', borderRadius: '16px', marginBottom: '4rem', boxShadow: '0 10px 40px rgba(0,0,0,0.06)', border: '1px solid rgba(0,0,0,0.05)', textAlign: 'left' }}>
+            <div className="grid" style={{ gap: '2rem', alignItems: 'center' }}>
+               <div style={{ height: 'auto', maxHeight: '220px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.1)' }}>
                   <img src={activeInfo.image} alt={categoryLabels[activeCategory]} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                </div>
                <div>
                   <h3 style={{ fontSize: '2rem', color: 'var(--primary)', marginBottom: '1rem' }}>{categoryLabels[activeCategory]}</h3>
-                  <p style={{ color: 'var(--text-light)', fontSize: '1.15rem', lineHeight: '1.7' }}>
+                  <p style={{ color: 'var(--text-light)', fontSize: '1.1rem', lineHeight: '1.7' }}>
                     {activeInfo.description}
                   </p>
                </div>
@@ -190,15 +190,13 @@ function Flooring() {
             </div>
           </div>
           
-          <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2rem' }}>
+          <div className="grid" style={{ gap: '2rem' }}>
             {displayPatterns.map((img, i) => (
               <div 
                 key={i} 
                 className="card" 
                 onClick={() => setSelectedImage({ url: img, index: i })}
                 style={{ border: 'none', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', background: '#fff', cursor: 'pointer', transition: 'transform 0.3s ease' }}
-                onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-10px)'}
-                onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
               >
                 <div style={{ height: '240px', overflow: 'hidden' }}>
                   <img src={img} alt={`Pattern ${i}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" />
@@ -282,10 +280,8 @@ function Flooring() {
         <div className="container">
           {flooring.categories.map((item, index) => (
             <div key={index} className="grid" style={{ 
-              gridTemplateColumns: index % 2 === 0 ? '1fr 1fr' : '1.2fr 0.8fr', 
-              marginBottom: '6rem', 
+              marginBottom: '4rem', 
               alignItems: 'center',
-              direction: index % 2 === 1 ? 'rtl' : 'ltr'
             }}>
               <div style={{ direction: 'ltr' }}>
                 <div style={{ color: 'var(--accent)', fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '1rem' }}>Premium Material</div>
@@ -320,16 +316,16 @@ function Flooring() {
 
                 <button className="button-primary" style={{ padding: '0.8rem 1.8rem', fontSize: '0.85rem' }}>View Technical Specs</button>
               </div>
-              <div className="hero-image" style={{ direction: 'ltr' }}>
+              <div className="hero-image">
                 <img 
                   src={item.image} 
                   alt={item.name} 
                   className="brochure-image-rounded" 
                   style={{ 
                     width: '100%', 
-                    height: '450px', 
+                    height: 'auto', 
+                    maxHeight: '450px',
                     objectFit: 'cover',
-                    borderRadius: index % 2 === 1 ? '160px 0 0 0' : '0 160px 0 0'
                   }} 
                   onError={(e) => { e.target.onerror = null; e.target.src="/images/flooring.png"; }}
                 />

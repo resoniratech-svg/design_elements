@@ -33,12 +33,12 @@ function Contact() {
       
       {/* Top Nav (similar to image) */}
       <nav style={{ position: 'relative', zIndex: 10, padding: '2rem 5%' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
           
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             {/* Large Watermark-like Let's Connect */}
             <h1 style={{ 
-              fontSize: '4.5rem', 
+              fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', 
               color: '#000', 
               fontWeight: 800, 
               margin: 0, 
@@ -47,13 +47,13 @@ function Contact() {
             }}>
               Let's Connect
             </h1>
-            <Link to="/" style={{ textDecoration: 'none', color: '#111', fontWeight: 800, fontSize: '0.9rem', letterSpacing: '0.05em', display: 'inline-block', marginTop: '0.5rem' }}>
+            <Link to="/" style={{ textDecoration: 'none', color: '#111', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.05em', display: 'inline-block', marginTop: '0.5rem' }}>
               &larr; BACK TO HOME
             </Link>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-            <div style={{ color: '#c4a052', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.9rem', letterSpacing: '0.15em' }}>CONTACT US</div>
+            <div style={{ color: '#c4a052', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.15em' }} className="hidden-mobile">CONTACT US</div>
             <GlobalSearch />
           </div>
 
@@ -62,7 +62,7 @@ function Contact() {
 
       {/* Main Content Two Columns */}
       <section style={{ padding: '2rem 5%', paddingBottom: '6rem' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '4rem', maxWidth: '1200px', margin: '0 auto' }}>
+        <div className="grid" style={{ maxWidth: '1200px', margin: '0 auto' }}>
           
           {/* Left Column */}
           <div style={{ paddingTop: '1rem' }}>
@@ -151,7 +151,7 @@ function Contact() {
           </div>
 
           {/* Right Column - Form */}
-          <div style={{ background: '#fafafa', padding: '3rem', borderRadius: '4px' }}>
+          <div style={{ background: '#fafafa', padding: 'clamp(1.5rem, 5vw, 3rem)', borderRadius: '4px' }}>
             <h3 style={{ fontSize: '1.8rem', color: '#9ca3af', fontWeight: 600, marginBottom: '2rem' }}>Send an Inquiry</h3>
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <input

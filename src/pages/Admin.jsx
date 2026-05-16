@@ -17,8 +17,8 @@ function Admin() {
 
   if (!isLoggedIn) {
     return (
-      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f3f4f6' }}>
-        <div className="card" style={{ padding: '3rem', width: '400px', textAlign: 'center' }}>
+      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f3f4f6', padding: '1.5rem' }}>
+        <div className="card" style={{ padding: 'clamp(1.5rem, 5vw, 3rem)', width: '100%', maxWidth: '400px', textAlign: 'center' }}>
           <h2 style={{ marginBottom: '2rem' }}>Admin Login</h2>
           <form onSubmit={handleLogin}>
             <input 
@@ -26,7 +26,7 @@ function Admin() {
               placeholder="Enter Admin Password" 
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              style={{ width: '100%', padding: '1rem', marginBottom: '1.5rem', border: '1px solid #ddd' }}
+              style={{ width: '100%', padding: '1rem', marginBottom: '1.5rem', border: '1px solid #ddd', outline: 'none' }}
             />
             <button type="submit" className="button-primary" style={{ width: '100%' }}>Login</button>
           </form>
@@ -37,10 +37,10 @@ function Admin() {
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: '#f9fafb', padding: '4rem 2rem' }}>
+    <div style={{ minHeight: '100vh', background: '#f9fafb', padding: 'clamp(2rem, 5vw, 4rem) 1.5rem' }}>
       <div className="container">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3rem' }}>
-          <h1>Admin Dashboard</h1>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3rem', flexWrap: 'wrap', gap: '1rem' }}>
+          <h1 style={{ fontSize: 'clamp(1.8rem, 5vw, 2.5rem)' }}>Admin Dashboard</h1>
           <button onClick={() => setIsLoggedIn(false)} style={{ background: 'none', border: 'none', color: 'red', cursor: 'pointer', fontWeight: 600 }}>Logout</button>
         </div>
 
