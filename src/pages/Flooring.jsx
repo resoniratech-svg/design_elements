@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import GlobalSearch from '../components/GlobalSearch';
 import content from '../data/content.json';
 import patterns from '../data/patterns.json';
 
@@ -14,25 +13,29 @@ function Flooring() {
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const category = params.get('category');
-    if (category && patterns[category]) {
-      setActiveCategory(category);
+    if (category && patterns[category] && activeCategory !== category) {
+      const timer = setTimeout(() => setActiveCategory(category), 0);
+      return () => clearTimeout(timer);
     }
-    
+  }, [location.search, activeCategory]);
+
+  useEffect(() => {
     if (location.hash === '#gallery') {
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         const element = document.getElementById('gallery');
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
       }, 100);
+      return () => clearTimeout(timer);
     }
-  }, [location]);
+  }, [location.hash]);
 
   const allPatterns = patterns[activeCategory] || [];
   const displayPatterns = allPatterns.slice(0, visibleCount);
 
   // Fix for the "gap" issue when clicking images (prevent body scroll shift)
-  React.useEffect(() => {
+  useEffect(() => {
     if (selectedImage) {
       document.body.style.overflow = 'hidden';
       document.body.style.paddingRight = '15px'; // Approximate scrollbar width

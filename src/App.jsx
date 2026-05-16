@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import GlobalSearch from './components/GlobalSearch';
 import content from './data/content.json';
@@ -11,8 +11,8 @@ import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 
 function HomePage() {
-  const { company, services, clients, manufacturers } = content;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const { company, clients, manufacturers } = content;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 

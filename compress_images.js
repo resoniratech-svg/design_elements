@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import sharp from 'sharp';
 
-const directoryPath = path.join(process.cwd(), 'public', 'images');
+const directoryPath = path.join(process.cwd(), 'public', 'images'); // eslint-disable-line no-undef
 
 async function processDirectory(dir) {
   const files = fs.readdirSync(dir);
