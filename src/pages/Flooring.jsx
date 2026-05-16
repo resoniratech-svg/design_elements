@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import GlobalSearch from '../components/GlobalSearch';
 import content from '../data/content.json';
 import patterns from '../data/patterns.json';
 
 function Flooring() {
   const { flooring } = content.services;
+  const location = useLocation();
   const [activeCategory, setActiveCategory] = useState('axminster-carpet');
   const [visibleCount, setVisibleCount] = useState(12);
   const [selectedImage, setSelectedImage] = useState(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const category = params.get('category');
+    if (category && patterns[category]) {
+      setActiveCategory(category);
+    }
+    
+    if (location.hash === '#gallery') {
+      setTimeout(() => {
+        const element = document.getElementById('gallery');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [location]);
 
   const allPatterns = patterns[activeCategory] || [];
   const displayPatterns = allPatterns.slice(0, visibleCount);
@@ -115,7 +133,7 @@ function Flooring() {
       </section>
 
       {/* Featured Collections Gallery */}
-      <section className="section-padding" style={{ background: '#f8f9fa' }}>
+      <section id="gallery" className="section-padding" style={{ background: '#f8f9fa' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Our Full Design Gallery</h2>

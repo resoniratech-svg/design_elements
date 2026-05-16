@@ -23,6 +23,31 @@ function HomePage() {
           </Link>
           <div className="nav-links" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
             <Link to="/" style={{ textDecoration: 'none', color: 'var(--text)', fontWeight: 600, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Home</Link>
+            
+            {/* Services Dropdown */}
+            <div className="nav-dropdown">
+              <a href="#services" style={{ textDecoration: 'none', color: 'var(--text)', fontWeight: 600, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em', cursor: 'pointer', padding: '10px 0' }}>Services</a>
+              <div className="nav-dropdown-content">
+                <div className="sub-dropdown">
+                  <Link to="/flooring" className="dropdown-item">
+                    <span>Flooring</span>
+                    <span style={{ fontSize: '1.2rem', lineHeight: 1 }}>&rsaquo;</span>
+                  </Link>
+                  <div className="sub-dropdown-content">
+                    <Link to="/flooring#gallery" className="sub-dropdown-header" style={{ textDecoration: 'none', display: 'block', color: 'inherit' }}>Our Full Design Gallery</Link>
+                    <Link to="/flooring?category=axminster-carpet#gallery" className="dropdown-item" style={{ padding: '8px 24px', fontSize: '0.8rem', fontWeight: 500 }}>Axminster Carpets</Link>
+                    <Link to="/flooring?category=carpet-rugs#gallery" className="dropdown-item" style={{ padding: '8px 24px', fontSize: '0.8rem', fontWeight: 500 }}>Custom Rugs</Link>
+                    <Link to="/flooring?category=carpet-tiles#gallery" className="dropdown-item" style={{ padding: '8px 24px', fontSize: '0.8rem', fontWeight: 500 }}>Carpet Tiles</Link>
+                    <Link to="/flooring?category=print-carpet#gallery" className="dropdown-item" style={{ padding: '8px 24px', fontSize: '0.8rem', fontWeight: 500 }}>Printed Carpets</Link>
+                    <Link to="/flooring?category=tufted-carpet#gallery" className="dropdown-item" style={{ padding: '8px 24px', fontSize: '0.8rem', fontWeight: 500 }}>Tufted Carpets</Link>
+                  </div>
+                </div>
+                <Link to="/furniture" className="dropdown-item">Furniture</Link>
+                <Link to="/wallpaper" className="dropdown-item">Wallpaper</Link>
+                <Link to="/window-treatments" className="dropdown-item">Window Blinds & Curtains</Link>
+              </div>
+            </div>
+
             <Link to="/gallery" style={{ textDecoration: 'none', color: 'var(--text)', fontWeight: 600, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Portfolio</Link>
             <Link to="/specialty" style={{ textDecoration: 'none', color: 'var(--text)', fontWeight: 600, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Specialty</Link>
             <Link to="/contact" style={{ textDecoration: 'none', color: 'var(--text)', fontWeight: 600, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Contact</Link>
@@ -96,7 +121,7 @@ function HomePage() {
       </section>
 
       {/* Services Overview (Page 5) */}
-      <section className="section-padding" style={{ background: '#fff' }}>
+      <section id="services" className="section-padding" style={{ background: '#fff' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
             <h2 style={{ fontSize: '0.8rem', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.3em', marginBottom: '1rem' }}>Our Expertise</h2>
