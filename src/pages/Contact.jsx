@@ -101,34 +101,13 @@ function Contact() {
               {/* Contact Numbers */}
               <div>
                 <h4 style={{ color: '#c4a052', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.1em', fontWeight: 700, marginBottom: '0.5rem' }}>CONTACT NUMBERS</h4>
-                {company.phones.map((phone, i) => {
-                  const rawPhone = phone.replace(/[^0-9+]/g, '');
-                  return (
-                    <div key={i} style={{ marginBottom: '1.5rem' }}>
-                      <span style={{ fontSize: '1.1rem', color: '#333', display: 'block', marginBottom: '0.5rem' }}>
-                        {phone}
-                      </span>
-                      <a href={`https://wa.me/${rawPhone.replace('+', '')}`} target="_blank" rel="noreferrer" style={{ 
-                        display: 'inline-flex', 
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        background: '#1ba345', 
-                        color: '#000', 
-                        padding: '0.6rem 1.5rem', 
-                        borderRadius: '20px', 
-                        textDecoration: 'none',
-                        fontSize: '0.95rem',
-                        fontWeight: 500,
-                        transition: 'opacity 0.2s'
-                      }}
-                      onMouseOver={(e) => e.target.style.opacity = '0.9'}
-                      onMouseOut={(e) => e.target.style.opacity = '1'}
-                      >
-                        Chat on WhatsApp &rarr;
-                      </a>
-                    </div>
-                  );
-                })}
+                {company.phones.map((phone, i) => (
+                  <div key={i} style={{ marginBottom: '1.5rem' }}>
+                    <span style={{ fontSize: '1.1rem', color: '#333', display: 'block', marginBottom: '0.5rem' }}>
+                      {phone}
+                    </span>
+                  </div>
+                ))}
               </div>
 
               {/* Email */}

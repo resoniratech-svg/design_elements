@@ -349,6 +349,11 @@ function HomePage() {
           </div>
         </div>
       </footer>
+
+      {/* Resonira Partner Banner (Image) */}
+      <a href="https://resonira.com/" target="_blank" rel="noopener noreferrer" style={{ display: 'block', cursor: 'pointer', overflow: 'hidden' }}>
+        <img src="/images/digital-partner.png" alt="Our Digital Partner - Resonira Technologies" style={{ width: '100%', height: 'auto', objectFit: 'contain', display: 'block', marginTop: '-9%', marginBottom: '-7%' }} />
+      </a>
     </div>
   );
 }
