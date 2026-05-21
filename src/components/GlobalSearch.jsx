@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function GlobalSearch() {
+function GlobalSearch({ width }) {
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
 
@@ -26,7 +26,7 @@ function GlobalSearch() {
           border: '1px solid var(--border)',
           outline: 'none',
           fontSize: '0.85rem',
-          width: 'clamp(100px, 20vw, 180px)',
+          width: width || 'clamp(100px, 20vw, 180px)',
           background: 'rgba(255,255,255,0.8)'
         }}
       />

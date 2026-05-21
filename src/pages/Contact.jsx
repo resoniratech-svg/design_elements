@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import GlobalSearch from '../components/GlobalSearch';
 import content from '../data/content.json';
 
 function Contact() {
@@ -54,7 +53,6 @@ function Contact() {
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
             <div style={{ color: '#c4a052', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.15em' }} className="hidden-mobile">CONTACT US</div>
-            <GlobalSearch />
           </div>
 
         </div>

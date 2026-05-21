@@ -59,39 +59,42 @@ function HomePage() {
             <GlobalSearch />
           </div>
 
-          {/* Hamburger Icon */}
-          <button className="hamburger" onClick={toggleMobileMenu}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile Nav Menu */}
-        <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}></div>
-        <div className={`mobile-nav ${isMobileMenuOpen ? 'active' : ''}`}>
-          <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '2rem' }}>
-            <button onClick={toggleMobileMenu} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
+          {/* Mobile Right Container (Search & Hamburger) */}
+          <div className="mobile-header-right">
+            <GlobalSearch width="clamp(100px, 25vw, 150px)" />
+            <button className="hamburger" onClick={toggleMobileMenu}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
               </svg>
             </button>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            <Link to="/" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Home</Link>
-            <Link to="/flooring" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Flooring</Link>
-            <Link to="/furniture" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Furniture</Link>
-            <Link to="/wallpaper" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Wallpaper</Link>
-            <Link to="/window-treatments" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Window Blinds</Link>
-            <Link to="/gallery" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Portfolio</Link>
-            <Link to="/specialty" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Specialty</Link>
-            <Link to="/contact" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Contact</Link>
-          </div>
         </div>
       </nav>
+
+      {/* Mobile Nav Menu */}
+      <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}></div>
+      <div className={`mobile-nav ${isMobileMenuOpen ? 'active' : ''}`}>
+        <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '2rem' }}>
+          <button onClick={toggleMobileMenu} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <Link to="/" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Home</Link>
+          <Link to="/flooring" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Flooring</Link>
+          <Link to="/furniture" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Furniture</Link>
+          <Link to="/wallpaper" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Wallpaper</Link>
+          <Link to="/window-treatments" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Window Blinds</Link>
+          <Link to="/gallery" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Portfolio</Link>
+          <Link to="/specialty" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Specialty</Link>
+          <Link to="/contact" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Contact</Link>
+        </div>
+      </div>
 
       {/* Hero Section */}
       <header className="section-padding" style={{ background: '#fff', position: 'relative' }}>

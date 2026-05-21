@@ -114,6 +114,10 @@ h1, h2, h3, h4 {
   right: 0;
 }
 
+.mobile-header-right {
+  display: none;
+}
+
 .hamburger {
   display: none;
   background: none;
@@ -124,6 +128,11 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 1024px) {
+  .mobile-header-right {
+    display: flex !important;
+    align-items: center;
+    gap: 1rem;
+  }
   .hamburger {
     display: block;
   }
