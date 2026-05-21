@@ -199,7 +199,7 @@ h1, h2, h3, h4 {
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 979px) {
   .grid { grid-template-columns: 1fr !important; }
   .clients-grid { grid-template-columns: repeat(2, 1fr); }
   .manufacturers-grid { grid-template-columns: repeat(3, 1fr); }
