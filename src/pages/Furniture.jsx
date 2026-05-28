@@ -1,6 +1,27 @@
 import { Link } from 'react-router-dom';
 import content from '../data/content.json';
 
+const LivingRoomIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c4a052" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="19" y1="6" x2="19" y2="21" />
+    <path d="M17 6h4l-1-3h-2z" fill="#c4a052" stroke="none" />
+    <path d="M17 6h4l-1-3h-2z" />
+    <rect x="2" y="11" width="14" height="7" rx="1.5" />
+    <path d="M4 11V9a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v2" />
+    <line x1="2" y1="18" x2="2" y2="20" />
+    <line x1="16" y1="18" x2="16" y2="20" />
+  </svg>
+);
+
+const BedIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c4a052" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M2 4v16M22 10v10" />
+    <rect x="2" y="10" width="20" height="6" rx="1" />
+    <rect x="4" y="7" width="6" height="3" rx="1" />
+    <rect x="12" y="7" width="6" height="3" rx="1" />
+  </svg>
+);
+
 function Furniture() {
   const { furniture } = content.services;
 
@@ -64,10 +85,6 @@ function Furniture() {
               <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--primary)' }}>Dining Elegance</h3>
               <p style={{ color: 'var(--text-light)', fontSize: '1rem', lineHeight: '1.6' }}>Timeless dining tables and chairs crafted from robust materials for exquisite gatherings and everyday durability.</p>
             </div>
-            <div className="card" style={{ border: 'none', background: 'var(--bg-light)', padding: '2rem', borderRadius: '16px' }}>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--primary)' }}>Custom Upholstery</h3>
-              <p style={{ color: 'var(--text-light)', fontSize: '1rem', lineHeight: '1.6' }}>Professional leather and fabric upholstery services to transform and personalize your furniture pieces.</p>
-            </div>
           </div>
         </div>
       </section>
@@ -82,18 +99,28 @@ function Furniture() {
               Transform your residence into a sanctuary of style. Our home collection features premium materials and timeless designs across all domestic spaces, ensuring both comfort and aesthetic superiority.
             </p>
             <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
-              <div>
-                <h4 style={{ fontSize: '1.1rem', color: 'var(--primary)', marginBottom: '0.5rem' }}>Living Rooms</h4>
-                <p style={{ fontSize: '0.9rem', color: '#666' }}>Luxurious sofas, coffee tables, and bespoke media units.</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <div style={{ width: '54px', height: '54px', borderRadius: '50%', background: '#faf6ee', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <LivingRoomIcon />
+                </div>
+                <div>
+                  <h4 style={{ fontSize: '1.1rem', color: '#111', fontWeight: 700, marginBottom: '0.5rem', fontFamily: "'Outfit', sans-serif" }}>Living Rooms</h4>
+                  <p style={{ fontSize: '0.9rem', color: '#666', lineHeight: '1.5' }}>Luxurious sofas, coffee tables, and bespoke media units.</p>
+                </div>
               </div>
-              <div>
-                <h4 style={{ fontSize: '1.1rem', color: 'var(--primary)', marginBottom: '0.5rem' }}>Bedrooms</h4>
-                <p style={{ fontSize: '0.9rem', color: '#666' }}>Custom wardrobes, elegant bed frames, and nightstands.</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <div style={{ width: '54px', height: '54px', borderRadius: '50%', background: '#faf6ee', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <BedIcon />
+                </div>
+                <div>
+                  <h4 style={{ fontSize: '1.1rem', color: '#111', fontWeight: 700, marginBottom: '0.5rem', fontFamily: "'Outfit', sans-serif" }}>Bedrooms</h4>
+                  <p style={{ fontSize: '0.9rem', color: '#666', lineHeight: '1.5' }}>Custom wardrobes, elegant bed frames, and nightstands.</p>
+                </div>
               </div>
             </div>
           </div>
           <div>
-            <img src="/images/wallpaper_living_room.png" alt="Home Collection" className="brochure-image-rounded" style={{ width: '100%', height: 'auto', maxHeight: '400px', objectFit: 'cover', borderRadius: '160px 0 160px 0' }} />
+            <img src="/images/img5.png" alt="Home Collection" className="brochure-image-rounded" style={{ width: '100%', height: '520px', objectFit: 'cover', borderRadius: '120px 0 120px 120px' }} />
           </div>
         </div>
       </section>
@@ -124,35 +151,6 @@ function Furniture() {
         </div>
       </section>
 
-      {/* Restoration Section */}
-      <section className="section-padding" style={{ background: '#fff' }}>
-        <div className="container grid" style={{ alignItems: 'center', gap: '4rem' }}>
-          <div>
-            <h2 style={{ fontSize: '0.8rem', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.3em', marginBottom: '1.5rem' }}>Craftsmanship</h2>
-            <h3 style={{ fontSize: '3rem', marginBottom: '2rem' }}>Leather Restoration</h3>
-            <p style={{ color: 'var(--text-light)', fontSize: '1.1rem', marginBottom: '2rem', lineHeight: '1.8' }}>
-              Preserve your investment with our professional leather restoration and upholstery services. We specialize in bringing life back to worn leather furniture, restoring its original texture, color, and suppleness through expert craftsmanship.
-            </p>
-            <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
-              <div>
-                <h4 style={{ fontSize: '1.1rem', color: 'var(--primary)', marginBottom: '0.5rem' }}>Leather Upholstery</h4>
-                <p style={{ fontSize: '0.9rem', color: '#666' }}>Premium fabric and leather replacements for high-end furniture.</p>
-              </div>
-              <div>
-                <h4 style={{ fontSize: '1.1rem', color: 'var(--primary)', marginBottom: '0.5rem' }}>Repair & Polish</h4>
-                <p style={{ fontSize: '0.9rem', color: '#666' }}>Deep cleaning, scratch repair, and color matching for all leather goods.</p>
-              </div>
-            </div>
-          </div>
-          <div style={{ overflow: 'hidden', borderRadius: '16px', boxShadow: 'var(--shadow-lg)' }}>
-            <img 
-              src="/images/leather_restoration.jpeg" 
-              alt="Leather Restoration Process" 
-              style={{ width: '100%', height: 'auto', display: 'block' }} 
-            />
-          </div>
-        </div>
-      </section>
 
       <footer className="section-padding" style={{ background: '#111', color: 'white', textAlign: 'center' }}>
         <div className="container">

@@ -9,10 +9,46 @@ import WindowTreatments from './pages/WindowTreatments';
 import Specialty from './pages/Specialty';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import CustomUpholstery from './pages/CustomUpholstery';
+import EmailModal from './components/EmailModal';
 
 function HomePage() {
   const { company, clients, manufacturers } = content;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [selectedEmail, setSelectedEmail] = useState(null);
+
+  const clientLogos = [
+    { name: "Katara Towers Hotels (Raffles and Fairmont)", logo: "/images/Katara_transparent.png", display: "Katara Towers Hotels", style: { transform: 'scale(1.55)' } },
+    { name: "Century hotel Doha and Marina", logo: "/images/Century Hotel.jpg", display: "Century Hotel", style: { transform: 'scale(1.3)' }, containerStyle: { background: 'linear-gradient(135deg, #000926 0%, #011d44 50%, #031539 100%)' } },
+    { name: "Casa Milano", logo: "/images/Casa Milano.jpg", display: "Casa Milano", style: { transform: 'scale(1.15)' } },
+    { name: "Tadmur Contracting", logo: "/images/Tadmur.jpg", display: "Tadmur" },
+    { name: "Hilton Hotel", logo: "/images/Hilton Hotel.png", display: "Hilton Hotel" },
+    { name: "UCC", logo: "/images/UCC Holding.jpg", display: "UCC" },
+    { name: "Sheraton Doha", logo: "/images/Sheraton Doha.jpg", display: "Sheraton", style: { transform: 'scale(1.4)' } },
+    { name: "Ritz Carlton", logo: "/images/Ritz Carlton.jpg", display: "Ritz Carlton", style: { transform: 'scale(1.3)' } },
+    { name: "Amlak", logo: "/images/AMLAK_transparent.png", display: "AMLAK", style: { transform: 'scale(1.2)', clipPath: 'inset(0% 0% 3% 0%)' } }
+  ];
+
+  const brandLogos = [
+    { name: "Tarkett", logo: "/images/tarkett_logo_transparent.png", display: "Tarkett", style: { transform: 'scale(1.2)' }, containerStyle: { background: '#003155' } },
+    { name: "Desso", logo: "/images/desso.png", display: "Desso", style: { transform: 'scale(1.25)' } },
+    { name: "Weihai haima", logo: "/images/Weihai Haima.jpg", display: "Weihai Haima", style: { transform: 'scale(1.2)' } },
+    { name: "Seventrust", logo: "/images/Seventrust.jpg", display: "Seventrust", style: { transform: 'scale(1.2)' } },
+    { name: "Ztfloor", logo: "/images/ZTFloor.jpg", display: "ZTFloor", style: { transform: 'scale(1.2)' } },
+    { name: "Ege", logo: "/images/Ege.png", display: "Ege", style: { transform: 'scale(1.25)' } },
+    { name: "Somfy", logo: "/images/Somfy.png", display: "Somfy", style: { transform: 'scale(1.2)' } },
+    { name: "Bancroft", logo: "/images/Bancroft.png", display: "Bancroft", style: { transform: 'scale(1.25)' }, containerStyle: { background: '#343434' } },
+    { name: "Topflor", logo: "/images/Topflor.png", display: "Topflor", style: { transform: 'scale(1.2)' } },
+    { name: "Interfloor", logo: "/images/Interfloor.png", display: "Interfloor", style: { transform: 'scale(1.2)' } },
+    { name: "Belgotex", logo: "/images/Belgotex.png", display: "Belgotex", style: { transform: 'scale(1.25)' } },
+    { name: "Csi", logo: "/images/csi.jpg", display: "CSI", style: { transform: 'scale(1.25)' } },
+    { name: "Primelay", logo: "/images/Primelay.jpg", display: "Primelay", style: { transform: 'scale(1.2)' } },
+    { name: "Mapei", logo: "/images/Mapei.png", display: "Mapei", style: { transform: 'scale(1.3)' } },
+    { name: "Tai ping", logo: "/images/Tai Ping.jpg", display: "Tai Ping", style: { transform: 'scale(1.2)' } },
+    { name: "Burmatex", logo: "/images/Burmatex.png", display: "Burmatex", style: { transform: 'scale(1.2)' }, containerStyle: { background: '#000000' } },
+    { name: "Lano", logo: "/images/Lano_transparent.png", display: "Lano", style: { transform: 'scale(1.25)' } },
+    { name: "Craftex india", logo: "/images/craftex india.png", display: "Craftex India", style: { transform: 'scale(1.15)' } }
+  ];
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
@@ -22,7 +58,7 @@ function HomePage() {
       <nav className="glass-nav">
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px' }}>
           <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
-            <img src="/images/logo.jpeg" alt="Design Elements" style={{ height: '60px', objectFit: 'contain' }} />
+            <img src="/images/logo.jpeg" alt="Design Elements" style={{ height: '75px', objectFit: 'contain' }} />
           </Link>
           
           {/* Desktop Links */}
@@ -50,6 +86,7 @@ function HomePage() {
                 <Link to="/furniture" className="dropdown-item">Furniture</Link>
                 <Link to="/wallpaper" className="dropdown-item">Wallpaper</Link>
                 <Link to="/window-treatments" className="dropdown-item">Window Blinds & Curtains</Link>
+                <Link to="/custom-upholstery" className="dropdown-item">Custom Upholstery</Link>
               </div>
             </div>
 
@@ -90,6 +127,7 @@ function HomePage() {
           <Link to="/furniture" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Furniture</Link>
           <Link to="/wallpaper" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Wallpaper</Link>
           <Link to="/window-treatments" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Window Blinds</Link>
+          <Link to="/custom-upholstery" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Custom Upholstery</Link>
           <Link to="/gallery" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Portfolio</Link>
           <Link to="/specialty" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Specialty</Link>
           <Link to="/contact" onClick={toggleMobileMenu} style={{ textDecoration: 'none', color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>Contact</Link>
@@ -102,16 +140,19 @@ function HomePage() {
           <div className="animate-fade-in">
             <span style={{ color: 'var(--accent)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.3em', fontSize: '0.75rem' }}>Premium Interior Solutions</span>
             <h1 style={{ fontSize: '4.5rem', marginTop: '1.5rem', color: '#111', lineHeight: '1.1' }}>Crafting Space <br /><span style={{ color: 'var(--accent)' }}>With Excellence.</span></h1>
-            <p style={{ marginTop: '2rem', color: 'var(--text-light)', fontSize: '1.15rem', maxWidth: '500px' }}>
+            <p style={{ marginTop: '2rem', color: 'var(--text-light)', fontSize: '1.15rem', maxWidth: '500px', whiteSpace: 'pre-line' }}>
               {company.introduction}
             </p>
             <div style={{ marginTop: '3.5rem', display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-              <Link to="/flooring" className="button-primary">View Collections</Link>
-              <Link to="/gallery" style={{ display: 'inline-block', padding: '1rem 0', textDecoration: 'none', color: '#111', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.9rem' }}>View Portfolio &rarr;</Link>
-            </div>
+               <Link to="/gallery" className="button-primary">View Portfolio </Link>
+{/*               <Link to="/flooring" className="button-primary">View Collections</Link>
+ */}{/*               <Link to="/gallery" style={{ display: 'inline-block', padding: '1rem 0', textDecoration: 'none', color: '#111', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.9rem' }}>View Portfolio &rarr;</Link>
+ */}            </div>
           </div>
           <div className="hero-image">
-            <img src="/images/furniture.png" alt="Premium Interior Design" className="brochure-image-rounded" style={{ width: '100%', height: 'auto', maxHeight: '650px', objectFit: 'cover' }} />
+            {/* <img src="/images/2nd img.png" alt="Premium Interior Design" className="brochure-image-rounded" style={{ width: '100%', height: 'auto', maxHeight: '650px', objectFit: 'cover' }} /> */}
+          <img src="/images/img2.png" alt="Premium Interior Design" className="brochure-image-rounded" style={{ width: '100%', height: '580px', objectFit: 'cover' }} />
+
           </div>
         </div>
       </header>
@@ -120,12 +161,14 @@ function HomePage() {
       <section className="section-padding" style={{ background: 'var(--bg-light)' }}>
         <div className="container grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '6rem', alignItems: 'center' }}>
           <div>
-            <img src="/images/luxury_carpet_hero.png" alt="About Us" className="brochure-image-rounded" style={{ width: '100%', height: 'auto', maxHeight: '500px', objectFit: 'cover', borderRadius: '160px 0 160px 0' }} />
+            {/* <img src="/images/luxury_carpet_hero.png" alt="About Us" className="brochure-image-rounded" style={{ width: '100%', height: 'auto', maxHeight: '500px', objectFit: 'cover', borderRadius: '160px 0 160px 0' }} /> */}
+             <img src="/images/img3.png" alt="About Us" className="brochure-image-rounded" style={{ width: '100%', height: '500px', objectFit: 'cover', borderRadius: '160px 0 160px 0' }} />
+
           </div>
           <div>
             <h2 style={{ fontSize: '0.8rem', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.3em', marginBottom: '1.5rem' }}>About Us</h2>
             <h3 style={{ fontSize: '2.5rem', marginBottom: '2rem' }}>Comprehensive Business Solutions</h3>
-            <p style={{ color: 'var(--text-light)', fontSize: '1.1rem', marginBottom: '2rem' }}>
+            <p style={{ color: 'var(--text-light)', fontSize: '1.1rem', marginBottom: '2rem', whiteSpace: 'pre-line' }}>
               {company.about}
             </p>
             <div className="grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
@@ -206,6 +249,16 @@ function HomePage() {
                 <h3 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>Window Blinds & Curtains</h3>
                 <p style={{ color: 'var(--text-light)', fontSize: '0.95rem', marginBottom: '1.5rem' }}>Tailored curtain solutions and motorized window blinds for privacy and style.</p>
                 <Link to="/window-treatments" style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'none', fontSize: '0.8rem', textTransform: 'uppercase' }}>Explore Blinds & Curtains &rarr;</Link>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img-container">
+                <img src="/images/Custom Upholstery.jpg" alt="Custom Upholstery" />
+              </div>
+              <div style={{ padding: '2.5rem' }}>
+                <h3 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>Custom Upholstery</h3>
+                <p style={{ color: 'var(--text-light)', fontSize: '0.95rem', marginBottom: '1.5rem' }}>Professional leather and fabric upholstery services to transform and personalize your furniture pieces.</p>
+                <Link to="/custom-upholstery" style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'none', fontSize: '0.8rem', textTransform: 'uppercase' }}>Explore Custom Upholstery &rarr;</Link>
               </div>
             </div>
           </div>
@@ -293,20 +346,74 @@ function HomePage() {
           <div style={{ marginBottom: '6rem' }}>
             <h4 style={{ textAlign: 'center', color: '#888', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.8rem', marginBottom: '3rem' }}>Trusted By</h4>
             <div className="clients-grid">
-              {clients.map((client, i) => (
-                <div key={i} className="logo-box">
-                  <div className="logo-box-text">{client}</div>
+              {clientLogos.map((client, i) => (
+                <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
+                  <div className="logo-box" style={{ 
+                    width: '100%', 
+                    height: '140px', 
+                    padding: '1rem', 
+                    display: 'flex', 
+                    justifyContent: 'center', 
+                    alignItems: 'center', 
+                    overflow: 'hidden',
+                    ...client.containerStyle
+                  }}>
+                    {client.logo ? (
+                      <img 
+                        src={client.logo} 
+                        alt={client.display} 
+                        style={{ 
+                          height: '95px', 
+                          maxWidth: '90%', 
+                          objectFit: 'contain',
+                          ...client.style
+                        }} 
+                      />
+                    ) : (
+                      <div className="logo-box-text" style={{ fontSize: '1.1rem' }}>{client.display}</div>
+                    )}
+                  </div>
+                  <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#555', textTransform: 'uppercase', letterSpacing: '0.12em', textAlign: 'center' }}>
+                    {client.display}
+                  </span>
                 </div>
               ))}
             </div>
           </div>
 
           <div>
-            <h4 style={{ textAlign: 'center', color: '#888', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.8rem', marginBottom: '3rem' }}>Global Manufacturers</h4>
+            <h3 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '4rem', color: '#111', fontWeight: 700 }}>Global Manufacturers</h3>
             <div className="manufacturers-grid">
-              {manufacturers.map((brand, i) => (
-                <div key={i} className="logo-box">
-                  <div className="logo-box-text" style={{ fontSize: '0.9rem' }}>{brand}</div>
+              {brandLogos.map((brand, i) => (
+                <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
+                  <div className="logo-box" style={{ 
+                    width: '100%', 
+                    height: '140px', 
+                    padding: '1rem', 
+                    display: 'flex', 
+                    justifyContent: 'center', 
+                    alignItems: 'center', 
+                    overflow: 'hidden',
+                    ...brand.containerStyle
+                  }}>
+                    {brand.logo ? (
+                      <img 
+                        src={brand.logo} 
+                        alt={brand.display} 
+                        style={{ 
+                          height: '95px', 
+                          maxWidth: '90%', 
+                          objectFit: 'contain',
+                          ...brand.style
+                        }} 
+                      />
+                    ) : (
+                      <div className="logo-box-text" style={{ fontSize: '1.1rem' }}>{brand.display}</div>
+                    )}
+                  </div>
+                  <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#555', textTransform: 'uppercase', letterSpacing: '0.12em', textAlign: 'center' }}>
+                    {brand.display}
+                  </span>
                 </div>
               ))}
             </div>
@@ -337,12 +444,56 @@ function HomePage() {
               <h4 style={{ color: 'white', marginBottom: '2rem' }}>Get in Touch</h4>
               <div style={{ marginBottom: '1rem' }}>
                 {company.emails.map((email, i) => (
-                  <p key={i} style={{ color: '#9ca3af' }}>{email}</p>
+                  <a 
+                    key={i} 
+                    href={`mailto:${email}`} 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setSelectedEmail(email);
+                    }}
+                    style={{ 
+                      color: '#9ca3af', 
+                      textDecoration: 'none', 
+                      display: 'block', 
+                      marginBottom: '0.5rem',
+                      transition: 'color 0.2s' 
+                    }}
+                    onMouseOver={(e) => e.target.style.color = '#c4a052'}
+                    onMouseOut={(e) => e.target.style.color = '#9ca3af'}
+                  >
+                    {email}
+                  </a>
                 ))}
               </div>
               <div>
                 {company.phones.map((phone, i) => (
-                  <p key={i} style={{ color: '#9ca3af' }}>{phone}</p>
+                  <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginTop: '0.5rem' }}>
+                    <p style={{ color: '#9ca3af', margin: 0 }}>{phone}</p>
+                    <a 
+                      href={`https://wa.me/${phone.replace(/[^0-9]/g, '')}`} 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      style={{ 
+                        display: 'inline-flex', 
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        background: '#15a34a', 
+                        color: '#000', 
+                        padding: '0.4rem 1.2rem', 
+                        borderRadius: '20px', 
+                        textDecoration: 'none',
+                        fontSize: '0.8rem',
+                        fontWeight: 600,
+                        alignSelf: 'flex-start',
+                        transition: 'opacity 0.2s',
+                        fontFamily: "'Outfit', sans-serif"
+                      }}
+                      onMouseOver={(e) => e.target.style.opacity = '0.9'}
+                      onMouseOut={(e) => e.target.style.opacity = '1'}
+                    >
+                      Chat on WhatsApp &rarr;
+                    </a>
+                  </div>
                 ))}
               </div>
             </div>
@@ -357,6 +508,12 @@ function HomePage() {
       <a href="https://resonira.com/" target="_blank" rel="noopener noreferrer" style={{ display: 'block', cursor: 'pointer', overflow: 'hidden' }}>
         <img src="/images/digital-partner.png" alt="Our Digital Partner - Resonira Technologies" style={{ width: '100%', height: 'auto', objectFit: 'contain', display: 'block', marginTop: '-9%', marginBottom: '-7%' }} />
       </a>
+
+      <EmailModal 
+        isOpen={!!selectedEmail} 
+        onClose={() => setSelectedEmail(null)} 
+        email={selectedEmail} 
+      />
     </div>
   );
 }
@@ -373,6 +530,7 @@ function App() {
         <Route path="/furniture" element={<Furniture />} />
         <Route path="/wallpaper" element={<Wallpaper />} />
         <Route path="/window-treatments" element={<WindowTreatments />} />
+        <Route path="/custom-upholstery" element={<CustomUpholstery />} />
         <Route path="/specialty" element={<Specialty />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />

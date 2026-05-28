@@ -17,8 +17,7 @@ function Gallery() {
 
   const projects = [
     { title: "Business Bay Executive Offices", category: "Commercial", img: "/images/modern_office_furniture.png", scope: "Flooring & Furniture" },
-    { title: "Palm Jumeirah Luxury Villa", category: "Residential", img: "/images/luxury_window_blinds_curtains.png", scope: "Window Treatments & Wallpaper" },
-    { title: "Downtown Dubai Retail Space", category: "Commercial", img: "/images/porcelain_tiles.png", scope: "Porcelain Tiles" },
+    { title: "Palm Jumeirah Luxury Villa", category: "Residential", img: "/images/living room.png", scope: "Window Treatments & Wallpaper" },
     { title: "Modern Marina Apartment", category: "Residential", img: "/images/luxury_lvt_flooring.png", scope: "LVT Flooring" },
     { title: "Boutique Hotel Lobby", category: "Commercial", img: "/images/luxury_carpet_hero.png", scope: "Custom Axminster Carpets" },
     { title: "Suburban Family Home", category: "Residential", img: "/images/vibrant_engineered_hardwood.png", scope: "Engineered Hardwood" },
@@ -26,7 +25,7 @@ function Gallery() {
     { title: "Grand Ballroom Renovation", category: "Commercial", img: "/images/axminster-carpet/Axminster carpet_page-0015.jpg", scope: "Bespoke Broadloom" },
     { title: "Luxury Penthouse Suite", category: "Residential", img: "/images/custom_rugs_category.png", scope: "Hand-Tufted Rugs" },
     { title: "High-End Executive Office", category: "Commercial", img: "/images/wallpaper_office.png", scope: "Textured Wall Coverings" },
-    { title: "Modern Villa Living Area", category: "Residential", img: "/images/wallpaper_living_room.png", scope: "Fabric Wallpapers" },
+    { title: "Modern Villa Living Area", category: "Residential", img: "/images/wallpaper1.png", scope: "Fabric Wallpapers" },
     { title: "Five-Star Hotel Corridors", category: "Commercial", img: "/images/print-carpet/print-carpet-15.jpg", scope: "Machine Printed Carpets" }
   ];
 
@@ -96,8 +95,8 @@ function Gallery() {
           <div className="grid" style={{ gap: '2.5rem' }}>
             {filteredProjects.map((p, i) => (
               <div key={i} className="card" style={{ border: 'none', overflow: 'hidden', borderRadius: '16px', position: 'relative' }}>
-                <div style={{ height: 'auto', minHeight: '350px', maxHeight: '450px', overflow: 'hidden', position: 'relative' }}>
-                  <img src={p.img} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} className="portfolio-image" />
+                <div style={{ height: '400px', overflow: 'hidden', position: 'relative' }}>
+                  <img src={p.img} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} className="portfolio-image" />
                   
                   {/* Hover Overlay */}
                   <div style={{

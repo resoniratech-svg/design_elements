@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import content from '../data/content.json';
+import EmailModal from '../components/EmailModal';
 
 function Contact() {
   const { company } = content;
@@ -11,20 +12,17 @@ function Contact() {
     message: ''
   });
 
+  const [emailModalData, setEmailModalData] = useState(null); // { email, subject, body }
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent('New Inquiry from ' + formData.name);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\n` +
-      `Email: ${formData.email}\n` +
-      `Phone: ${formData.phone}\n\n` +
-      `Requirements:\n${formData.message}`
-    );
-    window.location.href = `mailto:${company.emails[0]}?subject=${subject}&body=${body}`;
+    const subject = 'New Inquiry from ' + formData.name;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nRequirements:\n${formData.message}`;
+    setEmailModalData({ email: company.emails[0], subject, body });
   };
 
   return (
@@ -104,6 +102,31 @@ function Contact() {
                     <span style={{ fontSize: '1.1rem', color: '#333', display: 'block', marginBottom: '0.5rem' }}>
                       {phone}
                     </span>
+                    <a 
+                      href={`https://wa.me/${phone.replace(/[^0-9]/g, '')}`} 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      style={{ 
+                        display: 'inline-flex', 
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        background: '#15a34a', 
+                        color: '#000', 
+                        padding: '0.8rem 2rem', 
+                        borderRadius: '24px', 
+                        textDecoration: 'none',
+                        fontSize: '0.95rem',
+                        fontWeight: 600,
+                        marginTop: '0.5rem',
+                        transition: 'opacity 0.2s',
+                        letterSpacing: '0.02em',
+                        fontFamily: "'Outfit', sans-serif"
+                      }}
+                      onMouseOver={(e) => e.target.style.opacity = '0.9'}
+                      onMouseOut={(e) => e.target.style.opacity = '1'}
+                    >
+                      Chat on WhatsApp &rarr;
+                    </a>
                   </div>
                 ))}
               </div>
@@ -112,7 +135,17 @@ function Contact() {
               <div>
                 <h4 style={{ color: '#c4a052', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.1em', fontWeight: 700, marginBottom: '0.5rem' }}>EMAIL</h4>
                 {company.emails.map((email, i) => (
-                  <a key={i} href={`mailto:${email}`} style={{ fontSize: '1.1rem', color: '#333', textDecoration: 'none', display: 'block', marginBottom: '0.3rem', transition: 'color 0.2s' }} onMouseOver={(e) => e.target.style.color = '#c4a052'} onMouseOut={(e) => e.target.style.color = '#333'}>
+                  <a 
+                    key={i} 
+                    href={`mailto:${email}`} 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setEmailModalData({ email, subject: '', body: '' });
+                    }}
+                    style={{ fontSize: '1.1rem', color: '#333', textDecoration: 'none', display: 'block', marginBottom: '0.3rem', transition: 'color 0.2s' }} 
+                    onMouseOver={(e) => e.target.style.color = '#c4a052'} 
+                    onMouseOut={(e) => e.target.style.color = '#333'}
+                  >
                     {email}
                   </a>
                 ))}
@@ -191,7 +224,13 @@ function Contact() {
 
         </div>
       </section>
-
+      <EmailModal 
+        isOpen={!!emailModalData} 
+        onClose={() => setEmailModalData(null)} 
+        email={emailModalData?.email || ''} 
+        subject={emailModalData?.subject || ''}
+        body={emailModalData?.body || ''}
+      />
     </div>
   );
 }

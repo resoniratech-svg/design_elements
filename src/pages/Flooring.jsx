@@ -110,8 +110,12 @@ function Flooring() {
             <h2 style={{ fontSize: '0.8rem', color: 'var(--accent-light)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: '1.5rem' }}>Heritage & Excellence</h2>
             <h3 style={{ fontSize: '3.5rem', marginBottom: '2rem', color: 'white' }}>World-Class Carpet Solutions</h3>
             <p style={{ color: '#aaa', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '3rem' }}>
-              Established in 1958, our manufacturing partners operate the world's largest Axminster carpet mill. With a heritage of over 60 years in classical design and hospitality excellence, we deliver certified quality through ISO9001 and ISO14001 standards, ensuring your project meets the highest global specifications.
-            </p>
+{/*               Established in 1958, our manufacturing partners operate the world's largest Axminster carpet mill. With a heritage of over 60 years in classical design and hospitality excellence, we deliver certified quality through ISO9001 and ISO14001 standards, ensuring your project meets the highest global specifications.
+ */}          
+ Backed by over 15 years of industry expertise, Design Elements delivers premium carpet and flooring solutions tailored for hospitality, commercial, corporate, and luxury interior spaces. We collaborate with globally recognized manufacturing partners known for advanced production standards, innovative designs, and exceptional craftsmanship.
+Our solutions combine durability, elegance, and performance, offering a wide range of Axminster carpets, custom hospitality carpets, and high-quality flooring products designed to meet international standards. With a strong focus on quality assurance, sustainability, and customer satisfaction.
+From luxury hotels and offices to large-scale commercial projects, Design Elements ensures reliable service, superior materials, and customized solutions that enhance aesthetics, comfort, and long-term value.
+    </p>
             <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
                <div style={{ padding: '2rem', background: '#222', borderRadius: '12px' }}>
                   <h4 style={{ color: 'var(--accent-light)', marginBottom: '0.5rem' }}>Global Reach</h4>
@@ -302,6 +306,15 @@ function Flooring() {
                            <span style={{ color: 'var(--accent)', fontSize: '1.5rem' }}>&bull;</span> {type}
                         </li>
                       ))}
+                      {item.name === "Carpet Tiles" && (
+                        <li style={{ display: 'flex', alignItems: 'baseline', gap: '1rem', fontWeight: 600, color: '#555' }}>
+                           <span style={{ color: 'var(--accent)', fontSize: '1.5rem' }}>&bull;</span>
+                           <span>
+                             <span style={{ color: '#111', fontWeight: 700, marginRight: '0.5rem' }}>Available Sizes:</span>
+                             <span style={{ color: '#555', fontWeight: 600 }}>60 &times; 60 cm, 50 &times; 50 cm, Hexagon Pattern   &    Plank Type</span>
+                           </span>
+                        </li>
+                      )}
                     </ul>
                   </div>
                 )}
@@ -317,8 +330,8 @@ function Flooring() {
                   </div>
                 )}
 
-                <button className="button-primary" style={{ padding: '0.8rem 1.8rem', fontSize: '0.85rem' }}>View Technical Specs</button>
-              </div>
+{/*                 <button className="button-primary" style={{ padding: '0.8rem 1.8rem', fontSize: '0.85rem' }}>View Technical Specs</button>
+ */}              </div>
               <div className="hero-image">
                 <img 
                   src={item.image} 

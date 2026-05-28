@@ -1,6 +1,61 @@
 import { Link } from 'react-router-dom';
 import content from '../data/content.json';
 
+const RollerBlindsIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c4a052" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="18" height="3" rx="1" fill="#c4a052" stroke="none" />
+    <path d="M5 6h14v8H5z" fill="none" />
+    <line x1="4" y1="14" x2="20" y2="14" />
+    <line x1="18" y1="14" x2="18" y2="18" />
+    <circle cx="18" cy="19" r="1.5" fill="#c4a052" stroke="none" />
+  </svg>
+);
+
+const MotorizedIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c4a052" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="8" y="6" width="8" height="14" rx="2" />
+    <circle cx="12" cy="10" r="1.5" fill="#c4a052" stroke="none" />
+    <circle cx="12" cy="15" r="1" fill="#c4a052" stroke="none" />
+    <path d="M10 2a3 3 0 0 1 4 0" />
+    <path d="M8 4a6 6 0 0 1 8 0" />
+  </svg>
+);
+
+const VerticalBlindsIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c4a052" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="18" height="2" rx="0.5" fill="#c4a052" stroke="none" />
+    <rect x="5" y="6" width="3" height="15" rx="1" />
+    <rect x="11" y="6" width="3" height="15" rx="1" />
+    <rect x="17" y="6" width="3" height="15" rx="1" />
+  </svg>
+);
+
+const BlackoutIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c4a052" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="2" />
+    <line x1="12" y1="3" x2="12" y2="21" />
+    <line x1="3" y1="12" x2="21" y2="12" />
+    <path d="M3 3h18v6H3z" fill="#c4a052" opacity="0.3" stroke="none" />
+    <line x1="3" y1="9" x2="21" y2="9" strokeWidth="2" />
+  </svg>
+);
+
+const RomanBlindsIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c4a052" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="18" height="2" rx="0.5" fill="#c4a052" stroke="none" />
+    <rect x="4" y="6" width="16" height="4" rx="1" />
+    <rect x="4" y="11" width="16" height="4" rx="1" />
+    <rect x="4" y="16" width="16" height="4" rx="1" />
+  </svg>
+);
+
+const UVProtectionIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c4a052" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+    <text x="12" y="15" fontSize="8" fontWeight="900" fill="#c4a052" textAnchor="middle" stroke="none" fontFamily="'Outfit', sans-serif">UV</text>
+  </svg>
+);
+
 function WindowTreatments() {
   const { window_treatments } = content.services;
 
@@ -27,13 +82,13 @@ function WindowTreatments() {
             <p style={{ color: 'var(--text-light)', fontSize: '1.1rem', lineHeight: '1.8' }}>
               Transform your interiors with our premium window solutions. From sophisticated blinds to elegant custom-tailored curtains, we provide the perfect balance of light control, privacy, and aesthetic excellence.
             </p>
-            <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            {/* <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                <button className="button-primary" onClick={() => scrollToSection('blinds')}>Explore Blinds</button>
                <button className="button-primary" onClick={() => scrollToSection('curtains')} style={{ background: '#fff', color: '#111', border: '1px solid #111' }}>Explore Curtains</button>
-            </div>
+            </div> */}
           </div>
           <div className="hero-image">
-            <img src="/images/luxury_window_blinds_curtains.png" alt="Elegant Window Treatments" className="brochure-image-rounded" style={{ width: '100%', height: 'auto', maxHeight: '500px', objectFit: 'cover' }} />
+            <img src="/images/img 5.png" alt="Elegant Window Treatments" className="brochure-image-rounded" style={{ width: '100%', height: 'auto', maxHeight: '500px', objectFit: 'cover' }} />
           </div>
         </div>
       </header>
@@ -47,33 +102,51 @@ function WindowTreatments() {
             <p style={{ color: 'var(--text-light)', marginBottom: '2rem', fontSize: '1.1rem', lineHeight: '1.8' }}>
               Our high-performance blinds offer unmatched versatility for both residential and commercial spaces. Engineered for durability and ease of use, they provide precise light filtration and energy efficiency.
             </p>
-            <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '2rem' }}>
-              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontWeight: 600 }}>
-                  <span style={{ color: 'var(--accent)' }}>✓</span> Roller Blinds
+            <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem' }}>
+              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '1.2rem', fontWeight: 700, color: '#111', fontFamily: "'Outfit', sans-serif" }}>
+                  <div style={{ width: '54px', height: '54px', borderRadius: '50%', background: '#faf6ee', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <RollerBlindsIcon />
+                  </div>
+                  <span>Roller Blinds</span>
                 </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontWeight: 600 }}>
-                  <span style={{ color: 'var(--accent)' }}>✓</span> Vertical Blinds
+                <li style={{ display: 'flex', alignItems: 'center', gap: '1.2rem', fontWeight: 700, color: '#111', fontFamily: "'Outfit', sans-serif" }}>
+                  <div style={{ width: '54px', height: '54px', borderRadius: '50%', background: '#faf6ee', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <VerticalBlindsIcon />
+                  </div>
+                  <span>Vertical Blinds</span>
                 </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontWeight: 600 }}>
-                  <span style={{ color: 'var(--accent)' }}>✓</span> Roman Blinds
+                <li style={{ display: 'flex', alignItems: 'center', gap: '1.2rem', fontWeight: 700, color: '#111', fontFamily: "'Outfit', sans-serif" }}>
+                  <div style={{ width: '54px', height: '54px', borderRadius: '50%', background: '#faf6ee', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <RomanBlindsIcon />
+                  </div>
+                  <span>Roman Blinds</span>
                 </li>
               </ul>
-              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontWeight: 600 }}>
-                  <span style={{ color: 'var(--accent)' }}>✓</span> Motorized Systems
+              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '1.2rem', fontWeight: 700, color: '#111', fontFamily: "'Outfit', sans-serif" }}>
+                  <div style={{ width: '54px', height: '54px', borderRadius: '50%', background: '#faf6ee', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <MotorizedIcon />
+                  </div>
+                  <span>Motorized Systems</span>
                 </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontWeight: 600 }}>
-                  <span style={{ color: 'var(--accent)' }}>✓</span> Blackout Options
+                <li style={{ display: 'flex', alignItems: 'center', gap: '1.2rem', fontWeight: 700, color: '#111', fontFamily: "'Outfit', sans-serif" }}>
+                  <div style={{ width: '54px', height: '54px', borderRadius: '50%', background: '#faf6ee', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <BlackoutIcon />
+                  </div>
+                  <span>Blackout Options</span>
                 </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontWeight: 600 }}>
-                  <span style={{ color: 'var(--accent)' }}>✓</span> UV Protection
+                <li style={{ display: 'flex', alignItems: 'center', gap: '1.2rem', fontWeight: 700, color: '#111', fontFamily: "'Outfit', sans-serif" }}>
+                  <div style={{ width: '54px', height: '54px', borderRadius: '50%', background: '#faf6ee', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <UVProtectionIcon />
+                  </div>
+                  <span>UV Protection</span>
                 </li>
               </ul>
             </div>
           </div>
           <div>
-            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop" alt="Modern Blinds" className="brochure-image-rounded" style={{ width: '100%', height: 'auto', maxHeight: '450px', objectFit: 'cover', borderRadius: '40px 0 40px 0' }} />
+            <img src="/images/img4.png" alt="Modern Blinds" className="brochure-image-rounded" style={{ width: '100%', height: '520px', objectFit: 'cover', borderRadius: '50px' }} />
           </div>
         </div>
       </section>
@@ -99,27 +172,27 @@ function WindowTreatments() {
               { 
                 title: "Blackout Curtains", 
                 desc: "High-density thermal lining that blocks 100% of external light. Ideal for bedrooms and home theaters.",
-                img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop"
+                img: "/images/Blackout Curtain.jpg",
               },
               { 
                 title: "Sheer & Voile", 
                 desc: "Lightweight fabrics that provide daytime privacy while allowing soft, diffused sunlight to fill the room.",
-                img: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=800&auto=format&fit=crop"
+                img: "/images/Soft natural sunlight.jpg"
               },
               { 
                 title: "Motorized Systems", 
                 desc: "Sophisticated smart curtains that can be controlled via remote, smartphone, or voice commands.",
-                img: "https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?q=80&w=800&auto=format&fit=crop"
+                img: "/images/Motorized Systems img.jpg"
               },
-              { 
+         /*      { 
                 title: "Pencil & Pinch Pleat", 
                 desc: "Traditional, elegant headings that create a luxurious and formal atmosphere in any grand living space.",
                 img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop"
-              },
+              }, */
               { 
                 title: "Wave Curtains", 
                 desc: "A sleek, stackable design that creates a continuous smooth wave-like effect for a minimalist aesthetic.",
-                img: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=800&auto=format&fit=crop"
+                img: "/images/Wave Curtains.png"
               }
             ].map((type, i) => (
               <div key={i} className="card" style={{ padding: '0', overflow: 'hidden', background: '#fff', borderRadius: '16px', boxShadow: 'var(--shadow-sm)', border: '1px solid var(--border)' }}>
@@ -139,9 +212,7 @@ function WindowTreatments() {
             ))}
           </div>
 
-          <div style={{ marginTop: '4rem', borderRadius: '20px', overflow: 'hidden', height: 'auto', maxHeight: '400px' }}>
-            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop" alt="Luxury Curtain Display" style={{ width: '100%', height: 'auto', display: 'block' }} />
-          </div>
+
         </div>
       </section>
 

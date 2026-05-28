@@ -3,8 +3,8 @@
     "name": "Design Elements Trading and Contracting W.L.L",
     "name_ar": "ديسين المنتس للتجارة والمقاولات ذ.م.م",
     "tagline": "Interior Design & Solutions",
-    "introduction": "Design Elements is a leading provider of comprehensive interior solutions, specializing in premium flooring, furniture, wallpaper, and window treatments. As a key partner of Haima Carpet (the world's largest Axminster mill established in 1958), we bring decades of global expertise to Qatar's most prestigious projects.",
-    "about": "With over 60 years of heritage through our global manufacturing partners, we have successfully delivered flooring solutions to over 1,000 five-star hotels worldwide. Our dedicated team works closely with each client to provide bespoke designs that merge ergonomic comfort with high-end aesthetics.",
+    "introduction": "Welcome to Design Elements — your trusted destination for premium interior and furnishing solutions in Doha, Qatar. We specialize in high-quality flooring, stylish furniture, elegant wallpapers, modern window blinds, curtains, and customized interior products designed to enhance residential, commercial, hospitality, and corporate spaces.\n\nWith a commitment to quality, innovation, and customer satisfaction, we provide complete interior solutions that combine functionality, comfort, and modern aesthetics. Our experienced team works closely with clients to deliver tailored designs and cost-effective solutions that perfectly match their vision and requirements.",
+    "about": "Design Elements is a premier provider of interior design and furnishing solutions in Doha, Qatar. We specialize in sourcing and installing high-quality flooring, carpets, stylish furniture, elegant wallpapers, window blinds, and curtains for residential, commercial, hospitality, and corporate spaces.\n\nWith a strong focus on quality, innovation, and client satisfaction, our experienced team delivers complete, tailormade interior projects from initial consultation to professional installation. We are committed to exceptional craftsmanship, timely execution, and reliable service that transforms spaces with style and sophistication.", 
     "mission": "Our mission is to provide efficient, timely, and innovative solutions that exceed expectations and elevate the standard of interior design in the region.",
     "vision": "Our vision is to be the most trusted partner for organizations seeking to create exceptional spaces through cutting-edge design and world-class materials.",
     "address": "Office No. A071, 2nd Floor, Hub Business Center, Doha Souq Building, Al Nasser, Building No. 78, Zone 39, Street 840",
@@ -20,19 +20,19 @@
         {
           "name": "Carpet Tiles",
           "description": "Versatile and easy-to-install flooring solution. We provide high-density nylon and polypropylene tiles with various backing options like Bitumen, PVC, and Eco-friendly felt.",
-          "types": ["Nylon 6.6", "Solution Dyed", "Striped & Patterned", "Eco-Backing"],
+          "types": ["Loop Pile", "Cut Pile", "Multi-Level Loop"],
           "image": "/images/carpet_tiles_category.png"
         },
         {
           "name": "Broadloom & Hospitality Carpets",
           "description": "Seamless wall-to-wall luxury. Ideal for grand hotels, corridors, and executive offices where comfort and sound insulation are paramount.",
-          "types": ["Axminster", "Wilton", "Hand Tufted", "Machine Printed"],
+          "types": ["Mosque","Prayer Carpets","Axminster", "Wilton", "Hand Tufted", "Machine Printed"],
           "image": "/images/broadloom_carpet.png"
         },
         {
-          "name": "Specialized & Custom Carpets",
+          "name": "Specialized & Custom Rugs",
           "description": "Bespoke flooring solutions tailored to specific cultural and functional needs, including grand mosque designs and custom luxury rugs.",
-          "types": ["Mosque/Prayer Carpets", "Handmade Wool Rugs", "Sisal & Seagrass", "Hospitality Grade"],
+          "types": ["Handmade Rugs", "Machine Tufted Rugs", "Printed Rugs"],
           "image": "/images/custom_rugs_category.png"
         },
         {
@@ -66,17 +66,12 @@
         {
           "name": "Decking",
           "description": "Premium outdoor decking solutions for terraces and balconies.",
-          "image": "/images/hardwood.png"
+          "image": "/images/Decking 1.jpg"
         },
         {
-          "name": "Wooden Flooring (Herringbone Pattern)",
+          "name": "Parquet Flooring(Wood Flooring)",
           "description": "Classic and elegant wooden flooring in timeless herringbone and chevron patterns.",
           "image": "/images/wooden_herringbone.jpeg"
-        },
-        {
-          "name": "Porcelain & Vitrified Tiles",
-          "description": "High-density tiles for sophisticated wall and floor finishes.",
-          "image": "/images/porcelain_tiles.png"
         }
       ]
     },
@@ -101,6 +96,11 @@
         "description": "Tailored curtain solutions for every interior style."
       },
       "image": "/images/luxury_window_blinds_curtains.png"
+    },
+    "upholstery": {
+      "title": "Custom Upholstery & Restoration",
+      "description": "Professional leather and fabric upholstery services to transform and personalize your furniture pieces.",
+      "image": "/images/Custom Upholstery.jpg"
     }
   },
   "clients": [
